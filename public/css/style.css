@@ -457,3 +457,19 @@ popisek a {
   padding-left: 100px;
   padding-top: 50px;
 }
+
+table.bordered {
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.bordered th {
+  font-weight: bold;
+  font-size: 3rem;
+  border: 1px solid black;
+}
+
+.bordered td {
+  border: 1px solid black;
+}
