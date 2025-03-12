@@ -9,7 +9,9 @@
     "build": "node build.js",
     "update-paths": "node update-paths.js",
     "build-html": "node build-html.js",
-    "update-trainers": "node update-trainers.js"
+    "update-trainers": "node update-trainers.js",
+    "remove-mail-links": "node remove-mail-links.js",
+    "fix-trainers": "node fix-trainers.js"
   },
   "dependencies": {
     "express": "^4.18.2"

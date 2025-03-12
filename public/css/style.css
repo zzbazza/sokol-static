@@ -266,7 +266,7 @@ popisek a {
   font-size: 20px;
   padding-left: 50px;
   padding-right: 10px;
-  color: #abe319;
+  /*color: #abe319;*/
 }
 
 #seznamOdkaz a {
@@ -277,10 +277,6 @@ popisek a {
   text-decoration: none;
   color: black;
   font-size: 17px;
-}
-
-#seznamOdkaz li :hover {
-  color: #abe319;
 }
 
 .editace {
@@ -420,7 +416,7 @@ popisek a {
 
 .trainers-list li {
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .trainers-list a {
@@ -430,7 +426,6 @@ popisek a {
 
 .trainers-list a:hover {
   text-decoration: underline;
-}
   left: 0px;
 }
 

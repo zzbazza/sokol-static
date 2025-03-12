@@ -7,7 +7,7 @@ const config = {
   partialsDir: path.join(__dirname, 'public', 'partials'),
   pagesDir: path.join(__dirname, 'public', 'pages'),
   outputDir: path.join(__dirname, 'public', 'pages'),
-  indexOutput: path.join(__dirname, 'public', 'index.html')
+  indexOutput: path.join(__dirname, 'public', 'index.html'),
 };
 
 // Helper function to read a partial
@@ -18,55 +18,55 @@ function readPartial(name) {
 // Process a page
 function processPage(pageFile, isIndex = false) {
   console.log(`Processing page: ${pageFile}`);
-  
+
   // Determine input and output paths
-  const inputPath = isIndex 
+  const inputPath = isIndex
     ? path.join(config.rootDir, pageFile)
     : path.join(config.pagesDir, pageFile);
-  
+
   const outputPath = isIndex
     ? config.indexOutput
     : path.join(config.outputDir, pageFile);
-  
+
   // Read the file content
   const content = fs.readFileSync(inputPath, 'utf8');
-  
+
   // Extract the page content
   const contentMatch = content.match(/<div id="obsah">([\s\S]*?)<div class="sokol">/);
   if (!contentMatch) {
     console.error(`Could not extract content from ${pageFile}`);
     return;
   }
-  
+
   // Get the page content
-  const pageContent = contentMatch[1];
-  
+  let pageContent = contentMatch[1];
+
   // Get the page title
   const titleMatch = content.match(/<title>(.*?)<\/title>/);
   let pageTitle = titleMatch ? titleMatch[1].replace(' - TJ Sokol Stará Bělá', '') : 'TJ Sokol';
   if (pageTitle === 'TJ Sokol Stará Bělá') pageTitle = 'Hlavní strana';
-  
+
   // Read partials
   let header = readPartial('header');
   let top = readPartial('top');
   let menu = readPartial('menu');
   let footer = readPartial('footer');
-  
+
   // Set paths based on whether it's the index or a subpage
   const cssPath = isIndex ? 'css' : '../css';
   const jsPath = isIndex ? 'js' : '../js';
   const imgPath = isIndex ? 'images' : '../images';
   const rootPath = isIndex ? '' : '..';
-  
+
   // Replace placeholders in partials
   header = header.replace('$CSS_PATH', cssPath)
                  .replace('$JS_PATH', jsPath)
                  .replace('$TITLE', pageTitle);
-  
+
   top = top.replace(/\$ROOT_PATH/g, rootPath)
            .replace('$HOME_ACTIVE', pageFile === 'index.html' ? 'style="color: #abe319"' : '')
            .replace('$CONTACT_ACTIVE', pageFile === 'kontakt.html' ? 'style="color: #abe319"' : '');
-  
+
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
              .replace(/\$ROOT_PATH/g, rootPath)
              .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #abe319"' : '')
@@ -77,9 +77,9 @@ function processPage(pageFile, isIndex = false) {
              .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'style="color: #abe319"' : '')
              .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'style="color: #abe319"' : '')
              .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'style="color: #abe319"' : '');
-  
+
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
-  
+
   // Combine everything into the final HTML
   const finalHtml = `${header}
 ${top}
@@ -87,10 +87,10 @@ ${menu}
 
   <!-- Main Content Area -->
   <div id="obsah">${pageContent}<div class="sokol">`;
-  
+
   // Add footer
   const fullHtml = finalHtml + footer.substring(footer.indexOf('<div class="sokol">') + 19);
-  
+
   // Write the output file
   fs.writeFileSync(outputPath, fullHtml);
   console.log(`Generated: ${outputPath}`);
@@ -100,16 +100,16 @@ ${menu}
 function processAllPages() {
   // Process index.html
   processPage('index.html', true);
-  
+
   // Get all HTML files in the pages directory
   const pageFiles = fs.readdirSync(config.pagesDir)
     .filter(file => file.endsWith('.html'));
-  
+
   // Process each page
   pageFiles.forEach(pageFile => {
     processPage(pageFile);
   });
-  
+
   console.log('All pages processed successfully!');
 }
 
