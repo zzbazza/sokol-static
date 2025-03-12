@@ -1,0 +1,20 @@
+{
+  "name": "sokol-static",
+  "version": "1.0.0",
+  "description": "Express server for Sokol website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "node build.js",
+    "update-paths": "node update-paths.js",
+    "build-html": "node build-html.js",
+    "update-trainers": "node update-trainers.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
