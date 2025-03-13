@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 3000;
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve Font Awesome files
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
+
 // Define routes for each HTML page
 const routes = {
   '/': 'index.html',
