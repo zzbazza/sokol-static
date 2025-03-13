@@ -129,7 +129,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-#top-nav a:hover, #top-nav a.active {
+#top-nav a:hover, #top-nav .active a {
   color: #89c224;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -179,6 +179,7 @@ body {
   text-align: center;
   padding-left: 25px;
   padding: 0px;
+  display: none; /* Hidden by default, will be shown via JavaScript */
 }
 
 #tabmenu a {

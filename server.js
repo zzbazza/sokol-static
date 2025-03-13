@@ -22,7 +22,13 @@ const routes = {
   '/zaci': 'pages/zaci.html',
   '/zacky': 'pages/zacky.html',
   '/zeny': 'pages/zeny.html',
-  '/zeny2': 'pages/zeny2.html'
+  '/zeny2': 'pages/zeny2.html',
+  
+  // New routes
+  '/aspv': 'pages/aspv.html',
+  '/tenis': 'pages/tenis.html',
+  '/volejbal': 'pages/volejbal.html',
+  '/kct': 'pages/kct.html'
 };
 
 // Set up route handlers

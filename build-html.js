@@ -72,8 +72,20 @@ function processPage(pageFile, isIndex = false) {
            .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
            .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '');
 
+  // Define ASPV subpages
+  const aspvSubpages = ['zacky.html', 'zaci.html', 'florbal.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'aerobic.html', 'rodice.html'];
+  const isAspvSubpage = aspvSubpages.includes(pageFile);
+  
+  // Check if in ASPV or subpage of ASPV
+  const aspvActive = pageFile === 'aspv.html' || isAspvSubpage;
+  
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
              .replace(/\$ROOT_PATH/g, rootPath)
+             .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
+             .replace('$ASPV_ACTIVE', aspvActive ? 'class="active"' : '')
+             .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
+             .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
+             .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '')
              .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #89c224"' : '')
              .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'style="color: #89c224"' : '')
              .replace('$FLORBAL_ACTIVE', pageFile === 'florbal.html' ? 'style="color: #89c224"' : '')
