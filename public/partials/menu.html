@@ -1,26 +1,37 @@
-  <div id="menu">
-    <table id="tabmenu">
-      <tbody>
-      <tr>
-        <td><img src="$IMG_PATH/zacky.png" onclick="redirectTo('$ROOT_PATH/zacky')"></td>
-        <td><img src="$IMG_PATH/zaci.png" onclick="redirectTo('$ROOT_PATH/zaci')"></td>
-        <td><img src="$IMG_PATH/florbal.png" onclick="redirectTo('$ROOT_PATH/florbal')"></td>
-        <td><img src="$IMG_PATH/zeny.png" onclick="redirectTo('$ROOT_PATH/zeny')"></td>
-        <td><img src="$IMG_PATH/zeny2.png" onclick="redirectTo('$ROOT_PATH/zeny2')"></td>
-        <td><img src="$IMG_PATH/muzi.png" onclick="redirectTo('$ROOT_PATH/muzi')"></td>
-        <td><img src="$IMG_PATH/aerobik.png" onclick="redirectTo('$ROOT_PATH/aerobic')"></td>
-        <td><img src="$IMG_PATH/rodicesdetmi.png" onclick="redirectTo('$ROOT_PATH/rodice')"></td>
-      </tr>
-      <tr>
-        <td><a href="$ROOT_PATH/zacky" $ZACKY_ACTIVE>Žačky</a></td>
-        <td><a href="$ROOT_PATH/zaci" $ZACI_ACTIVE>Žáci</a></td>
-        <td><a href="$ROOT_PATH/florbal" $FLORBAL_ACTIVE>Florbal</a></td>
-        <td><a href="$ROOT_PATH/zeny" $ZENY_ACTIVE>Ženy</a></td>
-        <td><a href="$ROOT_PATH/zeny2" $ZENY2_ACTIVE>Ženy 2</a></td>
-        <td><a href="$ROOT_PATH/muzi" $MUZI_ACTIVE>Muži</a></td>
-        <td><a href="$ROOT_PATH/aerobic" $AEROBIC_ACTIVE>Aerobik</a></td>
-        <td><a href="$ROOT_PATH/rodice" $RODICE_ACTIVE>Rodice s dětmi</a></td>
-      </tr>
-      </tbody>
-    </table>
+<div id="menu">
+  <!-- New top-level menu -->
+  <div id="top-nav">
+    <ul>
+      <li><a href="$ROOT_PATH/" $ONAS_ACTIVE>O nás</a></li>
+      <li><a href="$ROOT_PATH/aspv" $ASPV_ACTIVE>ASPV</a></li>
+      <li><a href="$ROOT_PATH/tenis" $TENIS_ACTIVE>Tenis</a></li>
+      <li><a href="$ROOT_PATH/volejbal" $VOLEJBAL_ACTIVE>Volejbal</a></li>
+      <li><a href="$ROOT_PATH/kct" $KCT_ACTIVE>KČT</a></li>
+    </ul>
   </div>
+
+  <table id="tabmenu">
+    <tbody>
+    <tr>
+      <td><img src="$IMG_PATH/zacky.png" onclick="redirectTo('$ROOT_PATH/zacky')"></td>
+      <td><img src="$IMG_PATH/zaci.png" onclick="redirectTo('$ROOT_PATH/zaci')"></td>
+      <td><img src="$IMG_PATH/florbal.png" onclick="redirectTo('$ROOT_PATH/florbal')"></td>
+      <td><img src="$IMG_PATH/zeny.png" onclick="redirectTo('$ROOT_PATH/zeny')"></td>
+      <td><img src="$IMG_PATH/zeny2.png" onclick="redirectTo('$ROOT_PATH/zeny2')"></td>
+      <td><img src="$IMG_PATH/muzi.png" onclick="redirectTo('$ROOT_PATH/muzi')"></td>
+      <td><img src="$IMG_PATH/aerobik.png" onclick="redirectTo('$ROOT_PATH/aerobic')"></td>
+      <td><img src="$IMG_PATH/rodicesdetmi.png" onclick="redirectTo('$ROOT_PATH/rodice')"></td>
+    </tr>
+    <tr>
+      <td><a href="$ROOT_PATH/zacky" $ZACKY_ACTIVE>Žačky</a></td>
+      <td><a href="$ROOT_PATH/zaci" $ZACI_ACTIVE>Žáci</a></td>
+      <td><a href="$ROOT_PATH/florbal" $FLORBAL_ACTIVE>Florbal</a></td>
+      <td><a href="$ROOT_PATH/zeny" $ZENY_ACTIVE>Ženy</a></td>
+      <td><a href="$ROOT_PATH/zeny2" $ZENY2_ACTIVE>Ženy 2</a></td>
+      <td><a href="$ROOT_PATH/muzi" $MUZI_ACTIVE>Muži</a></td>
+      <td><a href="$ROOT_PATH/aerobic" $AEROBIC_ACTIVE>Aerobik</a></td>
+      <td><a href="$ROOT_PATH/rodice" $RODICE_ACTIVE>Rodice s dětmi</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

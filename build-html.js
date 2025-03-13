@@ -64,8 +64,8 @@ function processPage(pageFile, isIndex = false) {
                  .replace('$TITLE', pageTitle);
 
   top = top.replace(/\$ROOT_PATH/g, rootPath)
-           .replace('$HOME_ACTIVE', pageFile === 'index.html' ? 'style="color: #abe319"' : '')
-           .replace('$CONTACT_ACTIVE', pageFile === 'kontakt.html' ? 'style="color: #abe319"' : '')
+           .replace('$HOME_ACTIVE', pageFile === 'index.html' ? 'style="color: #89c224"' : '')
+           .replace('$CONTACT_ACTIVE', pageFile === 'kontakt.html' ? 'style="color: #89c224"' : '')
            .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
            .replace('$ASPV_ACTIVE', pageFile === 'aspv.html' ? 'class="active"' : '')
            .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
@@ -74,14 +74,14 @@ function processPage(pageFile, isIndex = false) {
 
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
              .replace(/\$ROOT_PATH/g, rootPath)
-             .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #abe319"' : '')
-             .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'style="color: #abe319"' : '')
-             .replace('$FLORBAL_ACTIVE', pageFile === 'florbal.html' ? 'style="color: #abe319"' : '')
-             .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'style="color: #abe319"' : '')
-             .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'style="color: #abe319"' : '')
-             .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'style="color: #abe319"' : '')
-             .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'style="color: #abe319"' : '')
-             .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'style="color: #abe319"' : '');
+             .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #89c224"' : '')
+             .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'style="color: #89c224"' : '')
+             .replace('$FLORBAL_ACTIVE', pageFile === 'florbal.html' ? 'style="color: #89c224"' : '')
+             .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'style="color: #89c224"' : '')
+             .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'style="color: #89c224"' : '')
+             .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'style="color: #89c224"' : '')
+             .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'style="color: #89c224"' : '')
+             .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'style="color: #89c224"' : '');
 
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
 
