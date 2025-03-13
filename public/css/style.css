@@ -72,8 +72,6 @@ body {
 
 #mapa {
   margin-top: 10px;
-  width: 450px;
-  height: 180px;
 }
 
 /*-----Navigation-----*/
@@ -280,6 +278,8 @@ popisek a {
 
 .zpravy {
   height: 100%;
+  padding: 0 50px 30px 50px;
+  font-size: 18px;
 }
 
 .inf {
@@ -314,15 +314,20 @@ popisek a {
   padding-left: 20px;
 }
 
+.contacts i {
+  float: left;
+  margin: 18px 12px 0 0;
+}
+
+.contacts p {
+  float: left;
+}
+
 #kolotoc {
   margin-left: 20px;
   padding-left: 5px;
   width: 405px;
   height: 310px;
-}
-
-#kontakty {
-  color: black;
 }
 
 #seznamOdkaz {
@@ -334,12 +339,6 @@ popisek a {
 
 #seznamOdkaz a {
   color: #000000;
-}
-
-#kontakty a {
-  text-decoration: none;
-  color: black;
-  font-size: 17px;
 }
 
 .editace {
