@@ -28,6 +28,7 @@ const routes = {
   '/aspv': 'pages/aspv.html',
   '/tenis': 'pages/tenis.html',
   '/volejbal': 'pages/volejbal.html',
+  '/hokej': 'pages/hokej.html',
   '/kct': 'pages/kct.html'
 };
 

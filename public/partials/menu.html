@@ -6,11 +6,12 @@
       <li $ASPV_ACTIVE><a href="$ROOT_PATH/aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
       <li $TENIS_ACTIVE><a href="$ROOT_PATH/tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
       <li $VOLEJBAL_ACTIVE><a href="$ROOT_PATH/volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
+      <li $HOKEJ_ACTIVE><a href="$ROOT_PATH/hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
       <li $KCT_ACTIVE><a href="$ROOT_PATH/kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
     </ul>
   </div>
 
-  <table id="tabmenu">
+  <table id="tabmenu" $ASPV_ACTIVE>
     <tbody>
     <tr>
       <td><img src="$IMG_PATH/zacky.png" onclick="redirectTo('$ROOT_PATH/zacky')"></td>
