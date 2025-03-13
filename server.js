@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const routes = {
   '/': 'index.html',
   '/aerobic': 'pages/aerobic.html',
-  '/dorost': 'pages/dorost.html',
+  '/florbal': 'pages/florbal.html',
   '/kontakt': 'pages/kontakt.html',
   '/muzi': 'pages/muzi.html',
   '/rodice': 'pages/rodice.html',
   '/rozvrh': 'pages/rozvrh.html',
-  '/zaci': 'pages/zaci.html', 
+  '/zaci': 'pages/zaci.html',
   '/zacky': 'pages/zacky.html',
   '/zeny': 'pages/zeny.html',
   '/zeny2': 'pages/zeny2.html'
@@ -37,7 +37,7 @@ app.get('/index', (req, res) => {
 // Handle old .html routes - redirect to clean URLs
 Object.entries(routes).forEach(([route, file]) => {
   if (file === 'index.html') return; // Skip index.html
-  
+
   app.get(`/${file}`, (req, res) => {
     // Redirect from old .html URL to clean URL
     const cleanUrl = route;

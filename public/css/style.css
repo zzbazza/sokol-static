@@ -30,6 +30,7 @@ body {
   height: 280px;
   background-image: url("../images/zahl5.png");
   background-repeat: no-repeat;
+  position: relative;
 }
 
 #logo {
@@ -78,11 +79,44 @@ body {
 
 /*-----Navigation-----*/
 
+#top-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(38, 38, 38, 0.7);
+  padding: 8px 0;
+  text-align: right;
+}
+
+#top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+#top-nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#top-nav a:hover, #top-nav a.active {
+  color: #abe319;
+}
+
 #nav {
   padding-top: 200px;
   list-style: disc;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   width: 419px;
   padding-left: 5px;
   margin: 0px;
@@ -90,13 +124,13 @@ body {
 }
 
 #nav li.index {
-  width: 200px;
+  width: 180px;
   float: left;
   text-align: left;
 }
 
 #nav li.inf {
-  width: 200px;
+  width: 180px;
   float: left;
   text-align: left;
 }

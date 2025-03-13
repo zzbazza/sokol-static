@@ -65,13 +65,18 @@ function processPage(pageFile, isIndex = false) {
 
   top = top.replace(/\$ROOT_PATH/g, rootPath)
            .replace('$HOME_ACTIVE', pageFile === 'index.html' ? 'style="color: #abe319"' : '')
-           .replace('$CONTACT_ACTIVE', pageFile === 'kontakt.html' ? 'style="color: #abe319"' : '');
+           .replace('$CONTACT_ACTIVE', pageFile === 'kontakt.html' ? 'style="color: #abe319"' : '')
+           .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
+           .replace('$ASPV_ACTIVE', pageFile === 'aspv.html' ? 'class="active"' : '')
+           .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
+           .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
+           .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '');
 
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
              .replace(/\$ROOT_PATH/g, rootPath)
              .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #abe319"' : '')
              .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'style="color: #abe319"' : '')
-             .replace('$DOROST_ACTIVE', pageFile === 'dorost.html' ? 'style="color: #abe319"' : '')
+             .replace('$FLORBAL_ACTIVE', pageFile === 'florbal.html' ? 'style="color: #abe319"' : '')
              .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'style="color: #abe319"' : '')
              .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'style="color: #abe319"' : '')
              .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'style="color: #abe319"' : '')
