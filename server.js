@@ -14,7 +14,6 @@ app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 const routes = {
   '/': 'index.html',
   '/aerobic': 'pages/aerobic.html',
-  '/florbal': 'pages/florbal.html',
   '/kontakt': 'pages/kontakt.html',
   '/muzi': 'pages/muzi.html',
   '/rodice': 'pages/rodice.html',
@@ -23,7 +22,7 @@ const routes = {
   '/zacky': 'pages/zacky.html',
   '/zeny': 'pages/zeny.html',
   '/zeny2': 'pages/zeny2.html',
-  
+
   // New routes
   '/aspv': 'pages/aspv.html',
   '/tenis': 'pages/tenis.html',

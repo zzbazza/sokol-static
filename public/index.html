@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/vader/jquery-ui.css" type="text/css" media="all">
   <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-  <title>Hlavní strana - TJ Sokol Stará Bělá</title>
+  <title>Informace a kontakty - TJ Sokol Stará Bělá</title>
   <meta name="google-site-verification" content="YJE2Wy5rJFWxOgx90pu56DWLnTezyXtJCRC-94MYmD0">
 </head>
 <body>
@@ -40,30 +40,17 @@
     </ul>
   </div>
 
-  <table id="tabmenu" >
-    <tbody>
-    <tr>
-      <td><img src="images/zacky.png" onclick="redirectTo('/zacky')"></td>
-      <td><img src="images/zaci.png" onclick="redirectTo('/zaci')"></td>
-      <td><img src="images/florbal.png" onclick="redirectTo('/florbal')"></td>
-      <td><img src="images/zeny.png" onclick="redirectTo('/zeny')"></td>
-      <td><img src="images/zeny2.png" onclick="redirectTo('/zeny2')"></td>
-      <td><img src="images/muzi.png" onclick="redirectTo('/muzi')"></td>
-      <td><img src="images/aerobik.png" onclick="redirectTo('/aerobic')"></td>
-      <td><img src="images/rodicesdetmi.png" onclick="redirectTo('/rodice')"></td>
-    </tr>
-    <tr>
-      <td><a href="/zacky" >Žačky</a></td>
-      <td><a href="/zaci" >Žáci</a></td>
-      <td><a href="/florbal" >Florbal</a></td>
-      <td><a href="/zeny" >Ženy</a></td>
-      <td><a href="/zeny2" >Ženy 2</a></td>
-      <td><a href="/muzi" >Muži</a></td>
-      <td><a href="/aerobic" >Aerobik</a></td>
-      <td><a href="/rodice" >Rodice s dětmi</a></td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="tabmenu ">
+    <ul>
+      <li ><a href="/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
+      <li ><a href="/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
+      <li ><a href="/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
+      <li ><a href="/zeny2"><i class="fa-solid fa-person-dress"></i>Ženy 2</a></li>
+      <li ><a href="/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
+      <li ><a href="/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
+      <li ><a href="/rodice"><i class="fa-solid fa-children"></i>Rodice s dětmi</a></li>
+    </ul>
+  </div>
 </div>
 
 
@@ -71,30 +58,31 @@
   <div id="obsah">
     <div id="leva">
       <div class="zpravy">
-<!--        <div class="event">-->
-<!--          <div class="title">Cvičení na T. J. Sokol Stará Bělá</div>-->
-<!--          <div class="datum">26.09.2023</div>-->
-<!--          <div class="text">-->
-<!--            <p>Cvičení na T. J. Sokol Stará Bělá probíhá v místní tělocvičně (ul. Na Zámčiskách 1). Můžete si vybrat z různých cvičení uvedených v rozvrhu hodin.</p>-->
-<!--            <p>Informace o cvičebních hodinách naleznete v <a href="rozvrh">Rozvrhu cvičebních hodin</a>.</p>-->
-<!--          </div>-->
-<!--        </div>-->
+        <h2>Kontaktní informace</h2>
+
+        <div id="kontakty">
+          <h3>Tělovýchovná jednota Sokol Stará Bělá, z.s.</h3>
+          <p>Junácká 6/138 </br> Ostrava - Stará Bělá</br> 72400</p>
+
+          <h3>Vedení oddílu:</h3>
+          <p><strong>Předseda:</strong> Hana Kokešová<br>
+            <strong>Email:</strong> hkok@centrum.cz<br>
+            <strong>Telefon:</strong> +420 736 141 385</p>
+
+        </div>
       </div>
     </div>
 
     <div id="prava">
-      <div id="seznamOdkaz">
-        <ul>
-          <li><a href="rozvrh">Rozvrh cvičebních hodin</a></li>
-          <li><a href="kontakt">Kontakty</a></li>
-        </ul>
+      <div id="mapa">
+        <h3>Kde nás najdete</h3>
+        <iframe style="border:none" src="https://frame.mapy.cz/s/gosagofabo" width="400" height="280" frameborder="0"></iframe>
       </div>
 
       <div class="fotky">
         <h3>Fotogalerie</h3>
         <div class="album">
           <a href="#"><img src="images/foto.jpg" width="300" height="200" alt="Fotogalerie"></a>
-          <p>Fotografie z cvičení a akcí našeho oddílu</p>
         </div>
       </div>
     </div>

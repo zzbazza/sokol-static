@@ -60,32 +60,32 @@ function processPage(pageFile, isIndex = false) {
 
   // Replace placeholders in partials
   header = header.replace('$CSS_PATH', cssPath)
-                 .replace('$JS_PATH', jsPath)
-                 .replace('$TITLE', pageTitle);
+    .replace('$JS_PATH', jsPath)
+    .replace('$TITLE', pageTitle);
 
   // Define ASPV subpages
-  const aspvSubpages = ['zacky.html', 'zaci.html', 'florbal.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'aerobic.html', 'rodice.html'];
+  const aspvSubpages = ['zacky.html', 'zaci.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'aerobic.html', 'rodice.html', 'rozvrh.html'];
   const isAspvSubpage = aspvSubpages.includes(pageFile);
 
   // Check if in ASPV or subpage of ASPV
   const aspvActive = pageFile === 'aspv.html' || isAspvSubpage;
 
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
-             .replace(/\$ROOT_PATH/g, rootPath)
-             .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
-             .replaceAll('$ASPV_ACTIVE', aspvActive ? 'class="active"' : '')
-             .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
-             .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
-             .replace('$HOKEJ_ACTIVE', pageFile === 'hokej.html' ? 'class="active"' : '')
-             .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '')
-             .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'style="color: #89c224"' : '')
-             .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'style="color: #89c224"' : '')
-             .replace('$FLORBAL_ACTIVE', pageFile === 'florbal.html' ? 'style="color: #89c224"' : '')
-             .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'style="color: #89c224"' : '')
-             .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'style="color: #89c224"' : '')
-             .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'style="color: #89c224"' : '')
-             .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'style="color: #89c224"' : '')
-             .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'style="color: #89c224"' : '');
+    .replace(/\$ROOT_PATH/g, rootPath)
+    .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
+    .replaceAll('$ASPV_ACTIVE_CLASS', aspvActive ? 'active' : '')
+    .replaceAll('$ASPV_ACTIVE', aspvActive ? 'class="active"' : '')
+    .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
+    .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
+    .replace('$HOKEJ_ACTIVE', pageFile === 'hokej.html' ? 'class="active"' : '')
+    .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '')
+    .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'class="active"' : '')
+    .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'class="active"' : '')
+    .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'class="active"' : '')
+    .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'class="active"' : '')
+    .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'class="active"' : '')
+    .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'class="active"' : '')
+    .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'class="active"' : '');
 
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
 
