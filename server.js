@@ -13,22 +13,24 @@ app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 // Define routes for each HTML page
 const routes = {
   '/': 'index.html',
-  '/aerobic': 'pages/aerobic.html',
-  '/kontakt': 'pages/kontakt.html',
-  '/muzi': 'pages/muzi.html',
-  '/rodice': 'pages/rodice.html',
-  '/rozvrh': 'pages/rozvrh.html',
-  '/zaci': 'pages/zaci.html',
-  '/zacky': 'pages/zacky.html',
-  '/zeny': 'pages/zeny.html',
-  '/zeny2': 'pages/zeny2.html',
-
-  // New routes
+  '/aspv/aerobic': 'pages/aspv/aerobic.html',
+  '/aspv/muzi': 'pages/aspv/muzi.html',
+  '/aspv/muzi2': 'pages/aspv/muzi2.html',
+  '/aspv/rodice': 'pages/aspv/rodice.html',
+  '/aspv/rozvrh': 'pages/aspv/rozvrh.html',
+  '/aspv/zaci': 'pages/aspv/zaci.html',
+  '/aspv/zacky': 'pages/aspv/zacky.html',
+  '/aspv/zeny': 'pages/aspv/zeny.html',
+  '/aspv/zeny2': 'pages/aspv/zeny2.html',
   '/aspv': 'pages/aspv.html',
   '/tenis': 'pages/tenis.html',
   '/volejbal': 'pages/volejbal.html',
   '/hokej': 'pages/hokej.html',
-  '/kct': 'pages/kct.html'
+  '/kct': 'pages/kct.html',
+  '/sokol/stanovy': 'pages/sokol/stanovy.html',
+  '/sokol/vybor': 'pages/sokol/vybor.html',
+  '/sokol/kalendar': 'pages/sokol/kalendar.html',
+  '/sokol/historie': 'pages/sokol/historie.html',
 };
 
 // Set up route handlers

@@ -293,7 +293,7 @@ body {
 .sponsors-section {
   display: flex;
   flex-direction: row;
-  width: 600px;
+  width: 630px;
   padding: 20px;
 }
 
@@ -363,10 +363,35 @@ table.bordered {
 
 .bordered th {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border: 1px solid black;
+  padding: 15px;
 }
 
 .bordered td {
   border: 1px solid black;
+}
+
+.vybor {
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 0 0 0 70px;
+}
+
+.vybor li {
+  margin: 15px 0;
+}
+.vybor i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #b9b9b9;
+  position: relative;
+  bottom: 3px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns:auto auto;
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  gap: 10px;
 }

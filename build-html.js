@@ -64,28 +64,41 @@ function processPage(pageFile, isIndex = false) {
     .replace('$TITLE', pageTitle);
 
   // Define ASPV subpages
-  const aspvSubpages = ['zacky.html', 'zaci.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'aerobic.html', 'rodice.html', 'rozvrh.html'];
+  let aspvSubpages = ['zacky.html', 'zaci.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'muzi2.html', 'aerobic.html', 'rodice.html', 'rozvrh.html'];
+  aspvSubpages = aspvSubpages.map(subpage => `aspv/${subpage}`);
   const isAspvSubpage = aspvSubpages.includes(pageFile);
+
+  // Define Sokol subpages
+  let sokolSubpages = ['stanovy.html', 'vybor.html', 'kalendar.html', 'historie.html'];
+  sokolSubpages = sokolSubpages.map(subpage => `sokol/${subpage}`);
+  const isSokolSubpage = sokolSubpages.includes(pageFile);
 
   // Check if in ASPV or subpage of ASPV
   const aspvActive = pageFile === 'aspv.html' || isAspvSubpage;
+  const sokolActive = pageFile === 'index.html' || isSokolSubpage;
 
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
     .replace(/\$ROOT_PATH/g, rootPath)
-    .replace('$ONAS_ACTIVE', pageFile === 'index.html' ? 'class="active"' : '')
+    .replace('$ONAS_ACTIVE', sokolActive ? 'class="active"' : '')
     .replaceAll('$ASPV_ACTIVE_CLASS', aspvActive ? 'active' : '')
+    .replaceAll('$SOKOL_ACTIVE_CLASS', sokolActive ? 'active' : '')
     .replaceAll('$ASPV_ACTIVE', aspvActive ? 'class="active"' : '')
-    .replace('$TENIS_ACTIVE', pageFile === 'tenis.html' ? 'class="active"' : '')
-    .replace('$VOLEJBAL_ACTIVE', pageFile === 'volejbal.html' ? 'class="active"' : '')
-    .replace('$HOKEJ_ACTIVE', pageFile === 'hokej.html' ? 'class="active"' : '')
-    .replace('$KCT_ACTIVE', pageFile === 'kct.html' ? 'class="active"' : '')
-    .replace('$ZACKY_ACTIVE', pageFile === 'zacky.html' ? 'class="active"' : '')
-    .replace('$ZACI_ACTIVE', pageFile === 'zaci.html' ? 'class="active"' : '')
-    .replace('$ZENY_ACTIVE', pageFile === 'zeny.html' ? 'class="active"' : '')
-    .replace('$ZENY2_ACTIVE', pageFile === 'zeny2.html' ? 'class="active"' : '')
-    .replace('$MUZI_ACTIVE', pageFile === 'muzi.html' ? 'class="active"' : '')
-    .replace('$AEROBIC_ACTIVE', pageFile === 'aerobic.html' ? 'class="active"' : '')
-    .replace('$RODICE_ACTIVE', pageFile === 'rodice.html' ? 'class="active"' : '');
+    .replace('$TENIS_ACTIVE', pageFile.includes('tenis.') ? 'class="active"' : '')
+    .replace('$VOLEJBAL_ACTIVE', pageFile.includes('volejbal.') ? 'class="active"' : '')
+    .replace('$HOKEJ_ACTIVE', pageFile.includes('hokej.') ? 'class="active"' : '')
+    .replace('$KCT_ACTIVE', pageFile.includes('kct.') ? 'class="active"' : '')
+    .replace('$ZACKY_ACTIVE', pageFile.includes('zacky.') ? 'class="active"' : '')
+    .replace('$ZACI_ACTIVE', pageFile.includes('zaci.') ? 'class="active"' : '')
+    .replace('$ZENY_ACTIVE', pageFile.includes('zeny.') ? 'class="active"' : '')
+    .replace('$ZENY2_ACTIVE', pageFile.includes('zeny2.') ? 'class="active"' : '')
+    .replace('$MUZI_ACTIVE', pageFile.includes('muzi.') ? 'class="active"' : '')
+    .replace('$MUZI2_ACTIVE', pageFile.includes('muzi2.') ? 'class="active"' : '')
+    .replace('$AEROBIC_ACTIVE', pageFile.includes('aerobic.') ? 'class="active"' : '')
+    .replace('$RODICE_ACTIVE', pageFile.includes('rodice.') ? 'class="active"' : '')
+    .replace('$VYBOR_ACTIVE', pageFile.includes('vybor.') ? 'class="active"' : '')
+    .replace('$STANOVY_ACTIVE', pageFile.includes('stanovy.') ? 'class="active"' : '')
+    .replace('$KALENDAR_ACTIVE', pageFile.includes('kalendar.') ? 'class="active"' : '')
+    .replace('$HISTORIE_ACTIVE', pageFile.includes('historie.') ? 'class="active"' : '');
 
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
 
@@ -105,14 +118,33 @@ ${menu}
   console.log(`Generated: ${outputPath}`);
 }
 
+// Helper function to read files recursively
+function readFilesRecursively(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      readFilesRecursively(filePath, fileList);
+    } else if (file.endsWith('.html')) {
+      // Get relative path from pagesDir
+      const relativePath = path.relative(config.pagesDir, filePath);
+      fileList.push(relativePath);
+    }
+  });
+
+  return fileList;
+}
+
 // Process all HTML files
 function processAllPages() {
   // Process index.html
   processPage('index.html', true);
 
-  // Get all HTML files in the pages directory
-  const pageFiles = fs.readdirSync(config.pagesDir)
-    .filter(file => file.endsWith('.html'));
+  // Get all HTML files in the pages directory and its subdirectories
+  const pageFiles = readFilesRecursively(config.pagesDir);
 
   // Process each page
   pageFiles.forEach(pageFile => {
