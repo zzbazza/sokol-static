@@ -395,3 +395,25 @@ table.bordered {
   /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
   gap: 10px;
 }
+
+.chronicle{
+  margin-top: 20px;
+  background-color: #e0e0e0;
+  font-style: italic;
+  padding: 20px;
+}
+
+.chronicle h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.chronicle h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0;
+}
