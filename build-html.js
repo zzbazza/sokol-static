@@ -64,7 +64,7 @@ function processPage(pageFile, isIndex = false) {
     .replace('$TITLE', pageTitle);
 
   // Define ASPV subpages
-  let aspvSubpages = ['zacky.html', 'zaci.html', 'zeny.html', 'zeny2.html', 'muzi.html', 'muzi2.html', 'aerobic.html', 'rodice.html', 'rozvrh.html'];
+  let aspvSubpages = ['zacky.html', 'zaci.html', 'zeny.html', 'muzi.html', 'aerobic.html', 'rodice.html', 'rozvrh.html', 'cykliste.html', 'turiste.html'];
   aspvSubpages = aspvSubpages.map(subpage => `aspv/${subpage}`);
   const isAspvSubpage = aspvSubpages.includes(pageFile);
 
@@ -90,9 +90,9 @@ function processPage(pageFile, isIndex = false) {
     .replace('$ZACKY_ACTIVE', pageFile.includes('zacky.') ? 'class="active"' : '')
     .replace('$ZACI_ACTIVE', pageFile.includes('zaci.') ? 'class="active"' : '')
     .replace('$ZENY_ACTIVE', pageFile.includes('zeny.') ? 'class="active"' : '')
-    .replace('$ZENY2_ACTIVE', pageFile.includes('zeny2.') ? 'class="active"' : '')
     .replace('$MUZI_ACTIVE', pageFile.includes('muzi.') ? 'class="active"' : '')
-    .replace('$MUZI2_ACTIVE', pageFile.includes('muzi2.') ? 'class="active"' : '')
+    .replace('$TURISTE_ACTIVE', pageFile.includes('turiste.') ? 'class="active"' : '')
+    .replace('$CYKLISTE_ACTIVE', pageFile.includes('cykliste.') ? 'class="active"' : '')
     .replace('$AEROBIC_ACTIVE', pageFile.includes('aerobic.') ? 'class="active"' : '')
     .replace('$RODICE_ACTIVE', pageFile.includes('rodice.') ? 'class="active"' : '')
     .replace('$VYBOR_ACTIVE', pageFile.includes('vybor.') ? 'class="active"' : '')
