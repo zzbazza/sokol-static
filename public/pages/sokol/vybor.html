@@ -3,6 +3,7 @@
 <head>
   <meta name="author" content="zzbazza">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../css/style.css" media="all">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/vader/jquery-ui.css" type="text/css" media="all">
@@ -16,7 +17,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js" type="text/javascript"></script>
 <script src="../js/main.js" type="text/javascript"></script>
 
+<!-- Menu Background Element with White Part -->
+<div class="menu-bg">
+  <div class="white-part"></div>
+</div>
+
 <div class="celek">
+
+
 
 <div id="zahlavi">
   <div id="logo">
@@ -27,16 +35,34 @@
   <div id="info"></div>
 </div>
 
-<div id="menu">
-  <!-- New top-level menu -->
+<!-- Fixed main navigation -->
+<nav class="main-nav">
+  <img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
+  <div class="nav-container">
+    <ul>
+      <li class="active"><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
+      <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
+      <li ><a href="../volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
+      <li ><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
+      <li ><a href="../kct"><i class="fa-solid fa-person-hiking"></i>KČT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- Legacy menu kept for compatibility -->
+<div id="menu" style="display: none;">
+  <!-- Legacy top-level menu -->
   <div id="top-nav">
     <ul>
-      <li class="active"><a href="../"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
+      <li $ONAS_ACTIVE><a href="../"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
       <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
-      <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
-      <li ><a href="../volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
-      <li ><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
-      <li ><a href="../kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
+      <li $TENIS_ACTIVE><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
+      <li $VOLEJBAL_ACTIVE><a href="../volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
+      <li $HOKEJ_ACTIVE><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
+      <li $KCT_ACTIVE><a href="../kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
     </ul>
   </div>
 
@@ -101,23 +127,21 @@
   <div class="sokol">
 </div>
 
-<div id="paticka">
+<!-- Footer -->
+<div class="footer">
   <div class="footer-content">
     <div class="sponsors-section">
-      Činnost TJ podporují:
-
-      <div class="copy">
-        <ul>
-          <li>Česká unie sportu - ČUS</li>
-          <li>Moravskoslezský kraj</li>
-          <li>statutární město Ostrava</li>
-          <li>městský obvod Stará Bělá</li>
-          <li>Národní sportovní agentura</li>
-        </ul>
-      </div>
+      <p>Činnost TJ podporují:</p>
+      <ul>
+        <li>Česká unie sportu - ČUS</li>
+        <li>Moravskoslezský kraj</li>
+        <li>statutární město Ostrava</li>
+        <li>městský obvod Stará Bělá</li>
+        <li>Národní sportovní agentura</li>
+      </ul>
     </div>
 
-    <div class="reg">
+    <div class="sponsor-logos">
       <a href="https://otu.cusmsk.cz/kontakty/otu" title="ČUS" target="_blank">
         <img src="../images/cus.svg" alt="ČUS">
       </a>
@@ -131,13 +155,11 @@
         <img src="../images/nsa_logo.svg" alt="NSA">
       </a>
       <a href="https://www.ostrava.cz/cs" title="Ostrava" target="_blank">
-        <img src="../images/logo_ostrava.png" class="small" alt="Ostrava">
+        <img src="../images/logo_ostrava.png" alt="Ostrava">
       </a>
     </div>
   </div>
 </div>
-
-<hr class="cistic">
 
 </div>
 

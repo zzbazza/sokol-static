@@ -1,5 +1,23 @@
-<div id="menu">
-  <!-- New top-level menu -->
+<!-- Fixed main navigation -->
+<nav class="main-nav">
+  <img src="$IMG_PATH/logo_sokol.png" alt="Sokol logo" class="menu-logo">
+  <div class="nav-container">
+    <ul>
+      <li $ONAS_ACTIVE><a href="$ROOT_PATH/"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
+      <li $ASPV_ACTIVE><a href="$ROOT_PATH/aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li $TENIS_ACTIVE><a href="$ROOT_PATH/tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
+      <li $VOLEJBAL_ACTIVE><a href="$ROOT_PATH/volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
+      <li $HOKEJ_ACTIVE><a href="$ROOT_PATH/hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
+      <li $KCT_ACTIVE><a href="$ROOT_PATH/kct"><i class="fa-solid fa-person-hiking"></i>KČT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- Legacy menu kept for compatibility -->
+<div id="menu" style="display: none;">
+  <!-- Legacy top-level menu -->
   <div id="top-nav">
     <ul>
       <li $ONAS_ACTIVE><a href="$ROOT_PATH/"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
