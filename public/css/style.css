@@ -32,6 +32,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 80px auto;
+  min-height: 65vh;
   background-color: #fff;
 }
 
@@ -94,7 +95,7 @@ body {
 .contact-info h2 {
   color: #659018;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -362,8 +363,9 @@ body {
 
 .footer-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -386,11 +388,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .sponsor-logos img {
-  height: 50px;
+  height: 45px;
   object-fit: contain;
 }
 
@@ -472,6 +474,7 @@ table.bordered {
   text-decoration: underline;
   margin: 0;
   padding: 10px 0;
+  color: black;
 }
 
 .chronicle h2 {
@@ -479,4 +482,5 @@ table.bordered {
   text-align: center;
   margin: 0;
   padding: 5px 0;
+  color: black;
 }
