@@ -6,6 +6,7 @@ const config = {
   rootDir: path.join(__dirname, 'public'),
   partialsDir: path.join(__dirname, 'public', 'partials'),
   pagesDir: path.join(__dirname, 'public', 'pages'),
+  imagesDir: path.join(__dirname, 'public', 'images'),
   outputDir: path.join(__dirname, 'public', 'pages'),
   indexOutput: path.join(__dirname, 'public', 'index.html'),
 };
@@ -99,6 +100,23 @@ function processPage(pageFile, isIndex = false) {
 
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
 
+
+  // Replace placeholders in the page content
+  const match = pageContent.match(/id="lightgallery" path="(\w+)">/);
+  console.dir(match);
+  if (match) {
+    let imgFolder = match[1];
+    const images = fs.readdirSync(path.join(config.imagesDir, imgFolder));
+    let imagesHtml = `<div id="lightgallery" path="${imgFolder}">`;
+    images.forEach(image => {
+      imagesHtml += `<a href="${path.join('images', imgFolder, image)}">
+            <img alt="foto" src="${path.join('images', imgFolder, image)}"/>
+          </a>`
+    });
+    imagesHtml += ` </div> <!-- lightgallery -->`
+    console.dir(pageContent.match(/<div id="lightgallery".*?<!-- lightgallery -->/gis));
+    pageContent = pageContent.replace(/<div id="lightgallery".*?<!-- lightgallery -->/gis, imagesHtml)
+  }
   // Combine everything into the final HTML
   const finalHtml = `${header}
 ${menu}

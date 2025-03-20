@@ -1,7 +1,6 @@
-function redirectTo(url) {
-    // Convert .html links to clean routes
-    const cleanUrl = url.replace('.html', '');
+// import lightGallery from 'lightgallery';
 
-    // Convert "index" to root URL "/"
-    window.location.href = cleanUrl === 'index' ? '/' : cleanUrl;
-}
+// Plugins
+// import lgThumbnail from 'lightgallery/plugins/thumbnail'
+// import lgZoom from 'lightgallery/plugins/zoom'
+

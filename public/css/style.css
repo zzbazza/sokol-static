@@ -60,7 +60,8 @@ body {
 
 .hero-image {
   width: 85%;
-  margin-left: -25%
+  margin-left: -25%;
+  margin-top: 20px;
 }
 
 .hero-text {
@@ -92,7 +93,12 @@ body {
   padding-right: 40px;
 }
 
-.contact-info h2 {
+.content-full {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.contact-info h2, .content-full h2 {
   color: #659018;
   margin-bottom: 20px;
   font-size: 3rem;
@@ -112,6 +118,7 @@ body {
 
 .location {
   width: 40%;
+  margin-top: 80px;
 }
 
 .location h3 {
@@ -196,7 +203,7 @@ body {
   color: #000;
 }
 
-.main-nav a:hover, .main-nav a:hover i, .main-nav .active > a , .main-nav .active > a > i{
+.main-nav a:hover, .main-nav a:hover i, .main-nav .active > a, .main-nav .active > a > i {
   color: #659018;
 }
 
@@ -308,7 +315,7 @@ body {
   padding: 5px 9px;
 }
 
-.tabmenu li i{
+.tabmenu li i {
   margin-right: 7px;
   color: #659018;
 }
@@ -446,6 +453,7 @@ table.bordered {
 .vybor li {
   margin: 15px 0;
 }
+
 .vybor i {
   margin-right: 15px;
   font-size: 1.2rem;
@@ -461,7 +469,7 @@ table.bordered {
   gap: 10px;
 }
 
-.chronicle{
+.chronicle {
   margin-top: 20px;
   background-color: #e0e0e0;
   font-style: italic;
@@ -483,4 +491,18 @@ table.bordered {
   margin: 0;
   padding: 5px 0;
   color: black;
+}
+
+
+#lightgallery {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+}
+
+#lightgallery img {
+  height: 180px;
 }
