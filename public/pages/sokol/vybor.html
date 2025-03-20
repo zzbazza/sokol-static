@@ -24,24 +24,31 @@
 
 <div class="celek">
 
-
-
-<div id="zahlavi">
-  <div id="logo">
-    <h2>TĚLOVÝC<span class="green">HOVNÁ JEDNOTA</span></h2>
-    <h2>SOKOL</h2>
-    <h2><span class="green">STARÁ</span> BĚLÁ</h2>
-  </div>
-  <div id="info"></div>
-</div>
-
 <!-- Fixed main navigation -->
 <nav class="main-nav">
   <img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
   <div class="nav-container">
     <ul>
-      <li class="active"><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
-      <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li class="dropdown active"><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
+          <li ><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
+          <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
+          <li class="active"><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
+        </ul>
+      </li>
+      <li class="dropdown "><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
+          <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
+          <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
+          <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
+          <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
+          <li ><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
+          <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
+          <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+        </ul>
+      </li>
       <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
       <li ><a href="../volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
       <li ><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
@@ -50,81 +57,46 @@
   </div>
 </nav>
 
-<div class="nav-spacer"></div>
-
-<!-- Legacy menu kept for compatibility -->
-<div id="menu" style="display: none;">
-  <!-- Legacy top-level menu -->
-  <div id="top-nav">
-    <ul>
-      <li $ONAS_ACTIVE><a href="../"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
-      <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
-      <li $TENIS_ACTIVE><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
-      <li $VOLEJBAL_ACTIVE><a href="../volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
-      <li $HOKEJ_ACTIVE><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
-      <li $KCT_ACTIVE><a href="../kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu ">
-    <ul>
-      <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
-      <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
-      <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
-      <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
-      <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
-      <li ><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
-      <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
-      <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu active">
-    <ul>
-      <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
-      <li ><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
-      <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
-      <li class="active"><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
-    </ul>
-  </div>
-</div>
-
 
   <!-- Main Content Area -->
-  <div id="obsah">
-    <div id="leva">
-      <div class="zpravy">
-        <h2>Členové výboru TJ</h2>
-        <ul class="vybor">
-          <li><i class="fa-solid fa-user-secret"></i>Hahna Kokešová</li>
-          <li><i class="fa-solid fa-user"></i>Václav Mončka</li>
-          <li><i class="fa-solid fa-user"></i>Svatava Zezulková</li>
-          <li><i class="fa-solid fa-user"></i>Petr Strakoš</li>
-          <li><i class="fa-solid fa-user"></i>Mojmír Krejčíček</li>
-          <li><i class="fa-solid fa-user"></i>Stanislav Kavka</li>
-          <li><i class="fa-solid fa-user"></i>Jiří Zezulka</li>
-          <li><i class="fa-solid fa-user"></i>Miloslav Hořínek</li>
-          <li><i class="fa-solid fa-user"></i>Václav Vyskočil</li>
-          <li><i class="fa-solid fa-user"></i>Petr Herman</li>
-          <li><i class="fa-solid fa-user"></i>František Kaděra</li>
-          <li><i class="fa-solid fa-user"></i>Kamil Boštík</li>
-          <li><i class="fa-solid fa-user"></i>Radim Kokeš</li>
-          <li><i class="fa-solid fa-user"></i>Jindra Blahaková</li>
-          <li><i class="fa-solid fa-user"></i>Jiří Lafek</li>
-          <li><i class="fa-solid fa-user"></i>Iveta Janková</li>
-          <li><i class="fa-solid fa-user"></i>Lenka Duroňová</li>
-        </ul>
+  <div class="container">
+    <div class="content">
+      <div class="contact-info">
+        <div class="zpravy">
+          <h2>Členové výboru TJ</h2>
+          <ul class="vybor">
+            <li><i class="fa-solid fa-user-secret"></i>Hahna Kokešová</li>
+            <li><i class="fa-solid fa-user"></i>Václav Mončka</li>
+            <li><i class="fa-solid fa-user"></i>Svatava Zezulková</li>
+            <li><i class="fa-solid fa-user"></i>Petr Strakoš</li>
+            <li><i class="fa-solid fa-user"></i>Mojmír Krejčíček</li>
+            <li><i class="fa-solid fa-user"></i>Stanislav Kavka</li>
+            <li><i class="fa-solid fa-user"></i>Jiří Zezulka</li>
+            <li><i class="fa-solid fa-user"></i>Miloslav Hořínek</li>
+            <li><i class="fa-solid fa-user"></i>Václav Vyskočil</li>
+            <li><i class="fa-solid fa-user"></i>Petr Herman</li>
+            <li><i class="fa-solid fa-user"></i>František Kaděra</li>
+            <li><i class="fa-solid fa-user"></i>Kamil Boštík</li>
+            <li><i class="fa-solid fa-user"></i>Radim Kokeš</li>
+            <li><i class="fa-solid fa-user"></i>Jindra Blahaková</li>
+            <li><i class="fa-solid fa-user"></i>Jiří Lafek</li>
+            <li><i class="fa-solid fa-user"></i>Iveta Janková</li>
+            <li><i class="fa-solid fa-user"></i>Lenka Duroňová</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="location">
+
+      </div>
+
     </div>
-
-    <div id="prava">
-
-    </div>
-
-    <hr class="cistic">
   </div>
 
-  <div class="sokol">
+  <!-- end of content -->
+</div>
+
+<!-- Footer -->
 </div>
 
 <!-- Footer -->

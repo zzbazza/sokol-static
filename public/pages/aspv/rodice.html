@@ -24,24 +24,31 @@
 
 <div class="celek">
 
-
-
-<div id="zahlavi">
-  <div id="logo">
-    <h2>TĚLOVÝC<span class="green">HOVNÁ JEDNOTA</span></h2>
-    <h2>SOKOL</h2>
-    <h2><span class="green">STARÁ</span> BĚLÁ</h2>
-  </div>
-  <div id="info"></div>
-</div>
-
 <!-- Fixed main navigation -->
 <nav class="main-nav">
   <img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
   <div class="nav-container">
     <ul>
-      <li ><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
-      <li class="active"><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li class="dropdown "><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
+          <li ><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
+          <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
+          <li ><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
+        </ul>
+      </li>
+      <li class="dropdown active"><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
+          <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
+          <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
+          <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
+          <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
+          <li class="active"><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
+          <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
+          <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+        </ul>
+      </li>
       <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
       <li ><a href="../volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
       <li ><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
@@ -50,101 +57,66 @@
   </div>
 </nav>
 
-<div class="nav-spacer"></div>
-
-<!-- Legacy menu kept for compatibility -->
-<div id="menu" style="display: none;">
-  <!-- Legacy top-level menu -->
-  <div id="top-nav">
-    <ul>
-      <li $ONAS_ACTIVE><a href="../"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
-      <li class="active"><a href="../aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
-      <li $TENIS_ACTIVE><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
-      <li $VOLEJBAL_ACTIVE><a href="../volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
-      <li $HOKEJ_ACTIVE><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
-      <li $KCT_ACTIVE><a href="../kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu active">
-    <ul>
-      <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
-      <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
-      <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
-      <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
-      <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
-      <li class="active"><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
-      <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
-      <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu ">
-    <ul>
-      <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
-      <li ><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
-      <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
-      <li ><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
-    </ul>
-  </div>
-</div>
-
 
   <!-- Main Content Area -->
-  <div id="obsah">
-    <div id="leva">
-      <h2>Rodiče s dětmi</h2>
-      <div class="zpravy">
-        <h3>Starší děti</h3>
-        <p style="margin: 0 50px 30px 50px; font-size: 18px;">
-          Cvičení rodičů s dětmi ve věku 3-6 let probíhá jednou týdně, v pondělí od 17:30 do 18:45 v tělocvičně TJ.
-          Hodiny jsou zaměřeny na všestranný rozvoj dítěte, podporu přirozené radosti z pohybu a základní pohybové
-          dovednosti.
-        </p>
-      </div>
-      <div class="zpravy">
-        <h3>Mladší děti</h3>
-        <p style="margin: 0 50px 30px 50px; font-size: 18px;">
-          Cvičení rodičů s dětmi ve věku 0-3 let probíhá jednou týdně, ve čtvrtek od 9:30 do 10:30 v tělocvičně TJ.
-          Hodiny jsou zaměřeny na všestranný rozvoj dítěte, podporu přirozené radosti z pohybu a základní pohybové
-          dovednosti.
-        </p>
+  <div class="container">
+    <div class="content">
+      <div class="contact-info">
+        <h2>Rodiče s dětmi</h2>
+        <div class="zpravy">
+          <h3>Starší děti</h3>
+          <p style="margin: 0 50px 30px 50px; font-size: 18px;">
+            Cvičení rodičů s dětmi ve věku 3-6 let probíhá jednou týdně, v pondělí od 17:30 do 18:45 v tělocvičně TJ.
+            Hodiny jsou zaměřeny na všestranný rozvoj dítěte, podporu přirozené radosti z pohybu a základní pohybové
+            dovednosti.
+          </p>
+        </div>
+        <div class="zpravy">
+          <h3>Mladší děti</h3>
+          <p style="margin: 0 50px 30px 50px; font-size: 18px;">
+            Cvičení rodičů s dětmi ve věku 0-3 let probíhá jednou týdně, ve čtvrtek od 9:30 do 10:30 v tělocvičně TJ.
+            Hodiny jsou zaměřeny na všestranný rozvoj dítěte, podporu přirozené radosti z pohybu a základní pohybové
+            dovednosti.
+          </p>
 
+        </div>
       </div>
-    </div>
 
-    <div id="prava">
-      <div id="seznamOdkaz">
-        <h3>Informace</h3>
-        <h4>Starší děti</h4>
-        <ul>
-          <li><strong>Cvičitelé:</strong></li>
-          <ul class="trainers-list">
-            <li>Iveta Janková (ivetajankova@post.cz, 732 510 790)</li>
-            <li>Svatava Zezulková (svatava.zezulkova@seznam.cz, 702 394 754)</li>
-            <li>Hana Lafková (hanka.krejcickova@seznam.cz)</li>
+      <div class="location">
+        <div id="seznamOdkaz">
+          <h3>Informace</h3>
+          <h4>Starší děti</h4>
+          <ul>
+            <li><strong>Cvičitelé:</strong></li>
+            <ul class="trainers-list">
+              <li>Iveta Janková (ivetajankova@post.cz, 732 510 790)</li>
+              <li>Svatava Zezulková (svatava.zezulkova@seznam.cz, 702 394 754)</li>
+              <li>Hana Lafková (hanka.krejcickova@seznam.cz)</li>
+            </ul>
+            <li><strong>Kdy:</strong> Pondělí 17:30 - 18:45</li>
+            <li><strong>Cena:</strong> 300 Kč/pololetí za dítě (doprovod zdarma)</li>
+            <li><strong>Věk dětí:</strong> 3-6 let</li>
           </ul>
-          <li><strong>Kdy:</strong> Pondělí 17:30 - 18:45</li>
-          <li><strong>Cena:</strong> 300 Kč/pololetí za dítě (doprovod zdarma)</li>
-          <li><strong>Věk dětí:</strong> 3-6 let</li>
-        </ul>
-        <h4>Mladší děti</h4>
-        <ul>
-          <li><strong>Cvičitelé:</strong></li>
-          <ul class="trainers-list">
-            <li>Iveta Janková (ivetajankova@post.cz, 732 510 790)</li>
+          <h4>Mladší děti</h4>
+          <ul>
+            <li><strong>Cvičitelé:</strong></li>
+            <ul class="trainers-list">
+              <li>Iveta Janková (ivetajankova@post.cz, 732 510 790)</li>
+            </ul>
+            <li><strong>Kdy:</strong> Čtvrtek 9:30 - 10:30</li>
+            <li><strong>Cena:</strong> 300 Kč/pololetí za dítě (doprovod zdarma)</li>
+            <li><strong>Věk dětí:</strong> 0-3 let</li>
           </ul>
-          <li><strong>Kdy:</strong> Čtvrtek 9:30 - 10:30</li>
-          <li><strong>Cena:</strong> 300 Kč/pololetí za dítě (doprovod zdarma)</li>
-          <li><strong>Věk dětí:</strong> 0-3 let</li>
-        </ul>
+        </div>
       </div>
-    </div>
 
-    <hr class="cistic">
+    </div>
   </div>
 
-  <div class="sokol">
+  <!-- end of content -->
+</div>
+
+<!-- Footer -->
 </div>
 
 <!-- Footer -->

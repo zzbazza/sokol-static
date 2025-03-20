@@ -3,8 +3,26 @@
   <img src="$IMG_PATH/logo_sokol.png" alt="Sokol logo" class="menu-logo">
   <div class="nav-container">
     <ul>
-      <li $ONAS_ACTIVE><a href="$ROOT_PATH/"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
-      <li $ASPV_ACTIVE><a href="$ROOT_PATH/aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li class="dropdown $SOKOL_ACTIVE_CLASS"><a href="$ROOT_PATH/"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
+        <ul class="dropdown-menu">
+          <li $KALENDAR_ACTIVE><a href="$ROOT_PATH/sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
+          <li $HISTORIE_ACTIVE><a href="$ROOT_PATH/sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
+          <li $STANOVY_ACTIVE><a href="$ROOT_PATH/sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
+          <li $VYBOR_ACTIVE><a href="$ROOT_PATH/sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
+        </ul>
+      </li>
+      <li class="dropdown $ASPV_ACTIVE_CLASS"><a href="$ROOT_PATH/aspv"><i class="fa-solid fa-person-running"></i>ASPV</a>
+        <ul class="dropdown-menu">
+          <li $ZACKY_ACTIVE><a href="$ROOT_PATH/aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
+          <li $ZACI_ACTIVE><a href="$ROOT_PATH/aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
+          <li $ZENY_ACTIVE><a href="$ROOT_PATH/aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
+          <li $MUZI_ACTIVE><a href="$ROOT_PATH/aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
+          <li $AEROBIC_ACTIVE><a href="$ROOT_PATH/aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
+          <li $RODICE_ACTIVE><a href="$ROOT_PATH/aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
+          <li $TURISTE_ACTIVE><a href="$ROOT_PATH/aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
+          <li $CYKLISTE_ACTIVE><a href="$ROOT_PATH/aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+        </ul>
+      </li>
       <li $TENIS_ACTIVE><a href="$ROOT_PATH/tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
       <li $VOLEJBAL_ACTIVE><a href="$ROOT_PATH/volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
       <li $HOKEJ_ACTIVE><a href="$ROOT_PATH/hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
@@ -12,42 +30,3 @@
     </ul>
   </div>
 </nav>
-
-<div class="nav-spacer"></div>
-
-<!-- Legacy menu kept for compatibility -->
-<div id="menu" style="display: none;">
-  <!-- Legacy top-level menu -->
-  <div id="top-nav">
-    <ul>
-      <li $ONAS_ACTIVE><a href="$ROOT_PATH/"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
-      <li $ASPV_ACTIVE><a href="$ROOT_PATH/aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
-      <li $TENIS_ACTIVE><a href="$ROOT_PATH/tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
-      <li $VOLEJBAL_ACTIVE><a href="$ROOT_PATH/volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
-      <li $HOKEJ_ACTIVE><a href="$ROOT_PATH/hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
-      <li $KCT_ACTIVE><a href="$ROOT_PATH/kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu $ASPV_ACTIVE_CLASS">
-    <ul>
-      <li $ZACKY_ACTIVE><a href="$ROOT_PATH/aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
-      <li $ZACI_ACTIVE><a href="$ROOT_PATH/aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
-      <li $ZENY_ACTIVE><a href="$ROOT_PATH/aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
-      <li $MUZI_ACTIVE><a href="$ROOT_PATH/aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
-      <li $AEROBIC_ACTIVE><a href="$ROOT_PATH/aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
-      <li $RODICE_ACTIVE><a href="$ROOT_PATH/aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
-      <li $TURISTE_ACTIVE><a href="$ROOT_PATH/aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
-      <li $CYKLISTE_ACTIVE><a href="$ROOT_PATH/aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu $SOKOL_ACTIVE_CLASS">
-    <ul>
-      <li $KALENDAR_ACTIVE><a href="$ROOT_PATH/sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
-      <li $HISTORIE_ACTIVE><a href="$ROOT_PATH/sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
-      <li $STANOVY_ACTIVE><a href="$ROOT_PATH/sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
-      <li $VYBOR_ACTIVE><a href="$ROOT_PATH/sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
-    </ul>
-  </div>
-</div>

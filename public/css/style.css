@@ -31,7 +31,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto;
   background-color: #fff;
 }
 
@@ -190,13 +190,60 @@ body {
   transition: color 0.3s;
 }
 
-.main-nav a:hover {
-  color: #89c224;
-}
-
 .main-nav i {
   margin-right: 8px;
   color: #000;
+}
+
+.main-nav a:hover, .main-nav a:hover i, .main-nav .active > a , .main-nav .active > a > i{
+  color: #659018;
+}
+
+/* Dropdown Menu */
+.main-nav .dropdown {
+  position: relative;
+}
+
+.main-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.main-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.main-nav .dropdown-menu li {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.main-nav .dropdown-menu a {
+  padding: 8px 15px;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.main-nav .dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.main-nav .dropdown-menu.active {
+  display: block;
 }
 
 
@@ -281,9 +328,6 @@ body {
   color: #659018;
 }
 
-.green {
-  color: #89c224;
-}
 .dark-green {
   color: #659018;
 }
@@ -301,7 +345,7 @@ body {
   font-size: 20px;
   padding-left: 50px;
   padding-right: 10px;
-  /*color: #89c224;*/
+  /*color: #659018;*/
 }
 
 #seznamOdkaz a {

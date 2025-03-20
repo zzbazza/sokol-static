@@ -32,7 +32,7 @@ function processPage(pageFile, isIndex = false) {
   const content = fs.readFileSync(inputPath, 'utf8');
 
   // Extract the page content
-  const contentMatch = content.match(/<div id="obsah">([\s\S]*?)<div class="sokol">/);
+  const contentMatch = content.match(/<div class="container">([\s\S]*?)<!-- Footer -->/);
   if (!contentMatch) {
     console.error(`Could not extract content from ${pageFile}`);
     return;
@@ -48,7 +48,6 @@ function processPage(pageFile, isIndex = false) {
 
   // Read partials
   let header = readPartial('header');
-  let top = readPartial('top');
   let menu = readPartial('menu');
   let footer = readPartial('footer');
 
@@ -79,10 +78,8 @@ function processPage(pageFile, isIndex = false) {
 
   menu = menu.replace(/\$IMG_PATH/g, imgPath)
     .replace(/\$ROOT_PATH/g, rootPath)
-    .replace('$ONAS_ACTIVE', sokolActive ? 'class="active"' : '')
     .replaceAll('$ASPV_ACTIVE_CLASS', aspvActive ? 'active' : '')
     .replaceAll('$SOKOL_ACTIVE_CLASS', sokolActive ? 'active' : '')
-    .replaceAll('$ASPV_ACTIVE', aspvActive ? 'class="active"' : '')
     .replace('$TENIS_ACTIVE', pageFile.includes('tenis.') ? 'class="active"' : '')
     .replace('$VOLEJBAL_ACTIVE', pageFile.includes('volejbal.') ? 'class="active"' : '')
     .replace('$HOKEJ_ACTIVE', pageFile.includes('hokej.') ? 'class="active"' : '')
@@ -104,11 +101,10 @@ function processPage(pageFile, isIndex = false) {
 
   // Combine everything into the final HTML
   const finalHtml = `${header}
-${top}
 ${menu}
 
   <!-- Main Content Area -->
-  <div id="obsah">${pageContent}<div class="sokol">`;
+  <div class="container">${pageContent}<!-- Footer -->`;
 
   // Add footer
   const fullHtml = finalHtml + footer.substring(footer.indexOf('<div class="sokol">') + 19);

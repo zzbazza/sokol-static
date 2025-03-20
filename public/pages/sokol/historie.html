@@ -24,24 +24,31 @@
 
 <div class="celek">
 
-
-
-<div id="zahlavi">
-  <div id="logo">
-    <h2>TĚLOVÝC<span class="green">HOVNÁ JEDNOTA</span></h2>
-    <h2>SOKOL</h2>
-    <h2><span class="green">STARÁ</span> BĚLÁ</h2>
-  </div>
-  <div id="info"></div>
-</div>
-
 <!-- Fixed main navigation -->
 <nav class="main-nav">
   <img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
   <div class="nav-container">
     <ul>
-      <li class="active"><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a></li>
-      <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a></li>
+      <li class="dropdown active"><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
+          <li class="active"><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
+          <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
+          <li ><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
+        </ul>
+      </li>
+      <li class="dropdown "><a href="../aspv"><i class="fa-solid fa-person-running"></i>ASPV</a>
+        <ul class="dropdown-menu">
+          <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
+          <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
+          <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
+          <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
+          <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
+          <li ><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
+          <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
+          <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+        </ul>
+      </li>
       <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
       <li ><a href="../volejbal"><i class="fa-solid fa-volleyball"></i>VOLEJBAL</a></li>
       <li ><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i>HOKEJ</a></li>
@@ -50,202 +57,166 @@
   </div>
 </nav>
 
-<div class="nav-spacer"></div>
-
-<!-- Legacy menu kept for compatibility -->
-<div id="menu" style="display: none;">
-  <!-- Legacy top-level menu -->
-  <div id="top-nav">
-    <ul>
-      <li $ONAS_ACTIVE><a href="../"><i class="fa-solid fa-house-flag"></i> O nás</a></li>
-      <li ><a href="../aspv"><i class="fa-solid fa-person-running"></i> ASPV</a></li>
-      <li $TENIS_ACTIVE><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i> Tenis</a></li>
-      <li $VOLEJBAL_ACTIVE><a href="../volejbal"><i class="fa-solid fa-volleyball"></i> Volejbal</a></li>
-      <li $HOKEJ_ACTIVE><a href="../hokej"><i class="fa-solid fa-hockey-puck"></i> Hokej</a></li>
-      <li $KCT_ACTIVE><a href="../kct"><i class="fa-solid fa-person-hiking"></i> KČT</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu ">
-    <ul>
-      <li ><a href="../aspv/zacky"><i class="fa-solid fa-child-dress"></i>Žačky</a></li>
-      <li ><a href="../aspv/zaci"><i class="fa-solid fa-child-reaching"></i>Žáci</a></li>
-      <li ><a href="../aspv/zeny"><i class="fa-solid fa-person-dress"></i>Ženy</a></li>
-      <li ><a href="../aspv/muzi"><i class="fa-solid fa-person-running"></i>Muži</a></li>
-      <li ><a href="../aspv/aerobic"><i class="fa-solid fa-person-falling"></i>Aerobik</a></li>
-      <li ><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
-      <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
-      <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
-    </ul>
-  </div>
-
-  <div class="tabmenu active">
-    <ul>
-      <li ><a href="../sokol/kalendar"><i class="fa-solid fa-calendar-days"></i>Kalendář</a></li>
-      <li class="active"><a href="../sokol/historie"><i class="fa-solid fa-clock-rotate-left"></i>Historie</a></li>
-      <li ><a href="../sokol/stanovy"><i class="fa-solid fa-list"></i>Stanovy</a></li>
-      <li ><a href="../sokol/vybor"><i class="fa-solid fa-people-line"></i>Výbor</a></li>
-    </ul>
-  </div>
-</div>
-
 
   <!-- Main Content Area -->
-  <div id="obsah">
-    <div id="leva">
-      <div class="zpravy">
-        <h2>Historické informace</h2>
+  <div class="container">
+    <div class="content">
+      <div class="contact-info">
+        <div class="zpravy">
+          <h2>Historické informace</h2>
 
-        <p>Zápis prvního roku Sokola z kroniky.</p>
+          <p>Zápis prvního roku Sokola z kroniky.</p>
 
-        <div class="chronicle">
-          <h1>Kronika.</h1>
-          <h2>Telocvičné jednoty „Sokol” ve Staré Bělé.</h2>
-          <br>
-          <h2>Jak povstal Sokol ve Staré Bělé?</h2>
-          <h2>1903.</h2>
-          Vroku 1902 v měsíci září konal se slet
-          sokolstva z Čech a Moravy v Mor. Ostravě.
-          Tento slet navštívili i někteří občané
-          ze Staré Bélé aby se přesvědčili co sokolstvo
-          je neboť oněm nic nevěděli ani nečetli.
-          Viděli ten krásný se ubírající průvod ke
-          čes. akc. pivovaru a krásné cvičení. Proto
-          semklo se několik přítomných hochů
-          ze Staré Bélé a sokolskou jednotu založili.
-          Byli to Berger Josef, Lednický Jan, Holaň J.
-          k tomu nápomocen byl Dubský z Paskova
-          cestující látkami který jako člen y Čech
-          věděl základní stanovy a tak pokračováno v další práci.
-          K získání financí
-          na zakoupení potřebného nářadí propůjčen sál p. Machou kde odbývala se
-          mikulášská zábava na sudech od piva
-          priložených prkny z vozů jako prozatimního jeviště. Výsledek tohoto prvého
-          podniku nebyl skvělý ale finanční
-          plán zajistěn tak, že se mohla konat
-          ustavující valná hromada která se konala 25. ledna 1903. kterou svolal Holaň Alois.
-          Starostou zvolen br Mácha Albin náčelníkem br Mácha Ludvík jednatelem
-          br. Březina Ladislav. Do výboru zvoleni
-          Balcar Emil, Balcar Alfon, Klein Ot.
-          Martínek Vladislav, Nováček Alois,
-          Holaň Josef, Klega Jan, Holaň Alfon,
-          Lednický Jan, Slamečka Emanuel. Šeděnka
-          Kajetán a Berger Josef revisoři účtu.
-          Delegátem do župy br. Mácha Ludvík.
-          Členské příspěvky stanoveny čínný 20h
-          přispívající 30h měsíčně, zápisné 40h.
-          Ustavením spravního výboru počalo
-          se pracovati pro stavbu jeviště kterou
-          provedli bři Staně František, Berger J.
-          Berger Eduard Lednický Jan a Svoboda
-          malíř z Příbora. Na oponě vymalováno část
-          zdejší vesnice a část Vítkovických
-          železáren pak podobu hostinského Máchu
-          jako havíře a sedláka s pluhem
-          nad nimiž se vznáší pták Sokol dobře
-          vystihnul. Zdroj příjmu jednotě tento
-          zajištěn pomyšlela jednota s přestavením telocvičny jež tato nevyhovovala.
-          Vypracovaná smlouva s br Máchou
-          Ludvíkem který místnosti pronajal
-          10 let bezplatně. Z techto byli vystavená
-          nevelká tělocvična a později ktéto
-          pristavená dřevěná šatna. Toho roku
-          pořádala jednota své první veřejné cvičení
-          dostavily se jednoty ze župy Východo
-          moravsko-slezské i mnoho obecenstva
-          z okolí. Veřejné cvičení skončilo s úspěchem moralním i finančním.
-          Navštěva cvičení
-          Muži : cvičebních hodin bylo 84 cvičenci v roce 212. Největší návštěva za
-          měsíc 84 nejmenší 60 průměr 80. Veřejně
-          jednota vystoupila šest krát. V pondělí
-          velikonoční pořádala jednota zábavní
-          večírek se cvičením prostných mužů.
-          Veřejné cvičení konáno dne 17. července
-          v Zabřehu nad odrou súčastnilo se 9 bři v kroji.
-          Veřejné cvičení v Paskové dne 6. září
-          8 bři v kroji 4 cvičili. Přednášky: Bitva
-          na Bílé Hoře před prof. Ceda z Mor Ostravy.
-          Celoroční příjem obnášel 703k 3h vydání
-          662k 21h pokladní hotovost 37k 82h Div.
-          hry pořádaný: Kmotr sedlák soudil
-          a Kulaty svět. Časopisy odebíraný
-          Sokol, Sokolský Věštník a Tyrš. Činnost
-          jednoty v tomto prvém roce dosti
-          obstojná a jest si jenom přáti aby
-          te zaseté sémě dále kličilo, aby za
-          rok opět se sejdem mohli jsme
-          si říci, že kráčíme v před a na této
-          cestě, že již nás žádný nepřítel nezastaví.
+          <div class="chronicle">
+            <h1>Kronika.</h1>
+            <h2>Telocvičné jednoty „Sokol” ve Staré Bělé.</h2>
+            <br>
+            <h2>Jak povstal Sokol ve Staré Bělé?</h2>
+            <h2>1903.</h2>
+            Vroku 1902 v měsíci září konal se slet
+            sokolstva z Čech a Moravy v Mor. Ostravě.
+            Tento slet navštívili i někteří občané
+            ze Staré Bélé aby se přesvědčili co sokolstvo
+            je neboť oněm nic nevěděli ani nečetli.
+            Viděli ten krásný se ubírající průvod ke
+            čes. akc. pivovaru a krásné cvičení. Proto
+            semklo se několik přítomných hochů
+            ze Staré Bélé a sokolskou jednotu založili.
+            Byli to Berger Josef, Lednický Jan, Holaň J.
+            k tomu nápomocen byl Dubský z Paskova
+            cestující látkami který jako člen y Čech
+            věděl základní stanovy a tak pokračováno v další práci.
+            K získání financí
+            na zakoupení potřebného nářadí propůjčen sál p. Machou kde odbývala se
+            mikulášská zábava na sudech od piva
+            priložených prkny z vozů jako prozatimního jeviště. Výsledek tohoto prvého
+            podniku nebyl skvělý ale finanční
+            plán zajistěn tak, že se mohla konat
+            ustavující valná hromada která se konala 25. ledna 1903. kterou svolal Holaň Alois.
+            Starostou zvolen br Mácha Albin náčelníkem br Mácha Ludvík jednatelem
+            br. Březina Ladislav. Do výboru zvoleni
+            Balcar Emil, Balcar Alfon, Klein Ot.
+            Martínek Vladislav, Nováček Alois,
+            Holaň Josef, Klega Jan, Holaň Alfon,
+            Lednický Jan, Slamečka Emanuel. Šeděnka
+            Kajetán a Berger Josef revisoři účtu.
+            Delegátem do župy br. Mácha Ludvík.
+            Členské příspěvky stanoveny čínný 20h
+            přispívající 30h měsíčně, zápisné 40h.
+            Ustavením spravního výboru počalo
+            se pracovati pro stavbu jeviště kterou
+            provedli bři Staně František, Berger J.
+            Berger Eduard Lednický Jan a Svoboda
+            malíř z Příbora. Na oponě vymalováno část
+            zdejší vesnice a část Vítkovických
+            železáren pak podobu hostinského Máchu
+            jako havíře a sedláka s pluhem
+            nad nimiž se vznáší pták Sokol dobře
+            vystihnul. Zdroj příjmu jednotě tento
+            zajištěn pomyšlela jednota s přestavením telocvičny jež tato nevyhovovala.
+            Vypracovaná smlouva s br Máchou
+            Ludvíkem který místnosti pronajal
+            10 let bezplatně. Z techto byli vystavená
+            nevelká tělocvična a později ktéto
+            pristavená dřevěná šatna. Toho roku
+            pořádala jednota své první veřejné cvičení
+            dostavily se jednoty ze župy Východo
+            moravsko-slezské i mnoho obecenstva
+            z okolí. Veřejné cvičení skončilo s úspěchem moralním i finančním.
+            Navštěva cvičení
+            Muži : cvičebních hodin bylo 84 cvičenci v roce 212. Největší návštěva za
+            měsíc 84 nejmenší 60 průměr 80. Veřejně
+            jednota vystoupila šest krát. V pondělí
+            velikonoční pořádala jednota zábavní
+            večírek se cvičením prostných mužů.
+            Veřejné cvičení konáno dne 17. července
+            v Zabřehu nad odrou súčastnilo se 9 bři v kroji.
+            Veřejné cvičení v Paskové dne 6. září
+            8 bři v kroji 4 cvičili. Přednášky: Bitva
+            na Bílé Hoře před prof. Ceda z Mor Ostravy.
+            Celoroční příjem obnášel 703k 3h vydání
+            662k 21h pokladní hotovost 37k 82h Div.
+            hry pořádaný: Kmotr sedlák soudil
+            a Kulaty svět. Časopisy odebíraný
+            Sokol, Sokolský Věštník a Tyrš. Činnost
+            jednoty v tomto prvém roce dosti
+            obstojná a jest si jenom přáti aby
+            te zaseté sémě dále kličilo, aby za
+            rok opět se sejdem mohli jsme
+            si říci, že kráčíme v před a na této
+            cestě, že již nás žádný nepřítel nezastaví.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="prava">
-      <h3>Starostové a předsedové TJ od roku 1903</h3>
-      <div class="history-grid">
-        <div>1903 - 1905</div>
-        <div> MÁCHA Albín</div>
-        <div> 1906</div>
-        <div> MAZUREK Karel</div>
-        <div> 1907</div>
-        <div> HOLAŇ Josef</div>
-        <div> 1908</div>
-        <div> KLEIN Otakar</div>
-        <div> 1909 - 1914</div>
-        <div> LEDNICKÝ Jan</div>
-        <div> 1918</div>
-        <div> NOVÁK Bohuš</div>
-        <div> 1919</div>
-        <div> BERGER Alois</div>
-        <div> 1920</div>
-        <div> LEDNICKÝ Jan</div>
-        <div> 1921 - 1923</div>
-        <div> BERGER Alois</div>
-        <div> 1924</div>
-        <div> BAJNAR Jindřich</div>
-        <div> 1925 - 1928</div>
-        <div> SÝKORA Petr</div>
-        <div> 1929</div>
-        <div> PALIČKA Rudolf</div>
-        <div> 1930 - 1932</div>
-        <div> SÝKORA Petr</div>
-        <div> 1933</div>
-        <div> MATĚJ František</div>
-        <div> 1934 - 1938</div>
-        <div> ŠEVČÍK Emil</div>
-        <div> 1939 - 1948</div>
-        <div> SÝKORA Petr</div>
-        <div> 1949</div>
-        <div> URBÁNEK Jan</div>
-        <div> 1950 - 1953</div>
-        <div> SÝKORA Karel</div>
-        <div> 1954 - 1960</div>
-        <div> SÝKORA Vlastimil</div>
-        <div> 1960 - 1961</div>
-        <div> ŠIMEČKA Antonín</div>
-        <div> 1962 - 1963</div>
-        <div> MERTA Květoslav</div>
-        <div> 1964 - 1970</div>
-        <div> MATĚJ Vlastimil</div>
-        <div> 1971 - 1977</div>
-        <div> FRÝDEL Zdeněk</div>
-        <div> 1978 - 1980</div>
-        <div> NOVÁČEK Vlastimil</div>
-        <div> 1981 - 1992</div>
-        <div> HOŘÍNEK Miloslav</div>
-        <div> 1993 - 1995</div>
-        <div> KREJČÍČEK Mojmír RNDr.</div>
-        <div> 1996 - 2001</div>
-        <div> MUTINA František</div>
-        <div> 2002 - 2014</div>
-        <div> KREJČÍČEK Mojmír RNDr.</div>
-        <div> 2015 -</div>
-        <div> KOKEŠOVÁ Hana Mgr.</div>
+      <div class="location">
+        <h3>Starostové a předsedové TJ od roku 1903</h3>
+        <div class="history-grid">
+          <div>1903 - 1905</div>
+          <div> MÁCHA Albín</div>
+          <div> 1906</div>
+          <div> MAZUREK Karel</div>
+          <div> 1907</div>
+          <div> HOLAŇ Josef</div>
+          <div> 1908</div>
+          <div> KLEIN Otakar</div>
+          <div> 1909 - 1914</div>
+          <div> LEDNICKÝ Jan</div>
+          <div> 1918</div>
+          <div> NOVÁK Bohuš</div>
+          <div> 1919</div>
+          <div> BERGER Alois</div>
+          <div> 1920</div>
+          <div> LEDNICKÝ Jan</div>
+          <div> 1921 - 1923</div>
+          <div> BERGER Alois</div>
+          <div> 1924</div>
+          <div> BAJNAR Jindřich</div>
+          <div> 1925 - 1928</div>
+          <div> SÝKORA Petr</div>
+          <div> 1929</div>
+          <div> PALIČKA Rudolf</div>
+          <div> 1930 - 1932</div>
+          <div> SÝKORA Petr</div>
+          <div> 1933</div>
+          <div> MATĚJ František</div>
+          <div> 1934 - 1938</div>
+          <div> ŠEVČÍK Emil</div>
+          <div> 1939 - 1948</div>
+          <div> SÝKORA Petr</div>
+          <div> 1949</div>
+          <div> URBÁNEK Jan</div>
+          <div> 1950 - 1953</div>
+          <div> SÝKORA Karel</div>
+          <div> 1954 - 1960</div>
+          <div> SÝKORA Vlastimil</div>
+          <div> 1960 - 1961</div>
+          <div> ŠIMEČKA Antonín</div>
+          <div> 1962 - 1963</div>
+          <div> MERTA Květoslav</div>
+          <div> 1964 - 1970</div>
+          <div> MATĚJ Vlastimil</div>
+          <div> 1971 - 1977</div>
+          <div> FRÝDEL Zdeněk</div>
+          <div> 1978 - 1980</div>
+          <div> NOVÁČEK Vlastimil</div>
+          <div> 1981 - 1992</div>
+          <div> HOŘÍNEK Miloslav</div>
+          <div> 1993 - 1995</div>
+          <div> KREJČÍČEK Mojmír RNDr.</div>
+          <div> 1996 - 2001</div>
+          <div> MUTINA František</div>
+          <div> 2002 - 2014</div>
+          <div> KREJČÍČEK Mojmír RNDr.</div>
+          <div> 2015 -</div>
+          <div> KOKEŠOVÁ Hana Mgr.</div>
+        </div>
       </div>
-      <hr class="cistic">
-    </div>
 
-    <div class="sokol">
+    </div>
+  </div>
+
+  <!-- Footer -->
 </div>
 
 <!-- Footer -->
