@@ -195,6 +195,14 @@ body {
   gap: 30px;
   width: 100%;
 }
+.main-nav ul li {
+  border-bottom: 3px solid transparent;
+}
+
+.main-nav ul li:hover {
+  border-bottom: 3px solid #659018;
+}
+
 
 .main-nav a {
   text-decoration: none;
@@ -220,6 +228,10 @@ body {
   position: relative;
 }
 
+.main-nav .dropdown-menu li {
+  border: none;
+}
+
 .main-nav .dropdown-menu {
   display: none;
   position: absolute;
@@ -229,9 +241,10 @@ body {
   background-color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 10px 0;
+  padding: 0;
   border-radius: 0 0 4px 4px;
   border: 1px solid #e0e0e0;
+  margin-top: 3px;
 }
 
 .main-nav .dropdown:hover .dropdown-menu {
