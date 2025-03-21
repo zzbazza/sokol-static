@@ -156,7 +156,7 @@ body {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   z-index: 1000;
 }
@@ -271,6 +271,7 @@ body {
 @media (max-width: 768px) {
   .main-nav {
     position: relative;
+    top: 0;
   }
 
   .hero, .content, .footer-content {
