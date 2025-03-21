@@ -119,8 +119,15 @@ body {
 }
 
 .location {
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 10px;
   width: 40%;
   margin-top: 90px;
+}
+
+.location a {
+  color: #000000;
 }
 
 .location.no-margin {
@@ -374,13 +381,28 @@ body {
   color: #659018;
 }
 
-.contacts-icons {
+.contacts-icons, .location .flex {
   margin: 20px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+.location .flex {
+  align-items: baseline;
+}
+
+.location .flex div:nth-child(odd) {
+  font-weight: 500;
+  flex: 0 1 calc(25% - 8px);
+  text-align: right;
+}
+
+.location .flex div:nth-child(even) {
+  flex: 0 1 calc(75% - 8px);
+  text-align: left;
 }
 
 .contacts-icons .item {
@@ -393,18 +415,6 @@ body {
 .contacts-icons i.item {
   flex: 0 1 calc(20% - 8px);
   text-align: right;
-}
-
-#mapa {
-  font-size: 20px;
-  padding-left: 50px;
-  padding-right: 10px;
-  /*color: #659018;*/
-}
-
-#mapa a {
-  margin-top: 10px;
-  color: #000000;
 }
 
 /* Footer */
