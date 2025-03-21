@@ -110,7 +110,9 @@ function processPage(pageFile, isIndex = false) {
     let imagesHtml = `<div id="lightgallery" path="${imgFolder}">`;
     images.forEach(image => {
       if(!(image.endsWith('.jpg') || image.endsWith('.jpeg') || image.endsWith('.png'))) return;
-      imagesHtml += `<a href="/${path.join('images', imgFolder, image)}" style="background-image:url('/${path.join('images', imgFolder, image)}');"></a>`
+      imagesHtml += `<a href="/${path.join('images', imgFolder, image)}" style="background-image:url('/${path.join('images', imgFolder, image)}');">
+      <img src="/${path.join('images', imgFolder, image)}" style="display: none;"/>
+      </a>`
     });
     imagesHtml += ` </div> <!-- lightgallery -->`
     pageContent = pageContent.replace(/<div id="lightgallery".*?<!-- lightgallery -->/gis, imagesHtml)
