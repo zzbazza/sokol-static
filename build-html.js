@@ -93,6 +93,7 @@ function processPage(pageFile, isIndex = false) {
     .replace('$CYKLISTE_ACTIVE', pageFile.includes('cykliste.') ? 'class="active"' : '')
     .replace('$AEROBIC_ACTIVE', pageFile.includes('aerobic.') ? 'class="active"' : '')
     .replace('$RODICE_ACTIVE', pageFile.includes('rodice.') ? 'class="active"' : '')
+    .replace('$ROZVRH_ACTIVE', pageFile.includes('rozvrh.') ? 'class="active"' : '')
     .replace('$VYBOR_ACTIVE', pageFile.includes('vybor.') ? 'class="active"' : '')
     .replace('$STANOVY_ACTIVE', pageFile.includes('stanovy.') ? 'class="active"' : '')
     .replace('$KALENDAR_ACTIVE', pageFile.includes('kalendar.') ? 'class="active"' : '')
@@ -103,18 +104,15 @@ function processPage(pageFile, isIndex = false) {
 
   // Replace placeholders in the page content
   const match = pageContent.match(/id="lightgallery" path="(\w+)">/);
-  console.dir(match);
   if (match) {
     let imgFolder = match[1];
     const images = fs.readdirSync(path.join(config.imagesDir, imgFolder));
     let imagesHtml = `<div id="lightgallery" path="${imgFolder}">`;
     images.forEach(image => {
-      imagesHtml += `<a href="${path.join('images', imgFolder, image)}">
-            <img alt="foto" src="${path.join('images', imgFolder, image)}"/>
-          </a>`
+      if(!(image.endsWith('.jpg') || image.endsWith('.jpeg') || image.endsWith('.png'))) return;
+      imagesHtml += `<a href="/${path.join('images', imgFolder, image)}" style="background-image:url('/${path.join('images', imgFolder, image)}');"></a>`
     });
     imagesHtml += ` </div> <!-- lightgallery -->`
-    console.dir(pageContent.match(/<div id="lightgallery".*?<!-- lightgallery -->/gis));
     pageContent = pageContent.replace(/<div id="lightgallery".*?<!-- lightgallery -->/gis, imagesHtml)
   }
   // Combine everything into the final HTML

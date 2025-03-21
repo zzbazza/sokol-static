@@ -38,7 +38,7 @@
 
 <!-- Fixed main navigation -->
 <nav class="main-nav">
-  <img src="images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
+  <a href="/"><img src="images/logo_sokol.png" alt="Sokol logo" class="menu-logo"></a>
   <div class="nav-container">
     <ul>
       <li class="dropdown active"><a href="/"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
@@ -59,6 +59,7 @@
           <li ><a href="/aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
           <li ><a href="/aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
           <li ><a href="/aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+          <li ><a href="/aspv/rozvrh"><i class="fa-solid fa-table"></i>Rozvrh</a></li>
         </ul>
       </li>
       <li ><a href="/tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
@@ -85,7 +86,53 @@
     <!-- Content Section -->
     <div class="content">
       <div class="contact-info">
-        <h2>KONTAKTNÍ INFORMACE</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi leo mi, nonummy eget tristique non, rhoncus non
+        leo. Nullam rhoncus aliquam metus. Nulla quis diam. Aenean placerat. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos hymenaeos. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Fusce nibh. Ut tempus purus at lorem. Et harum quidem rerum facilis est et expedita distinctio. Nulla non lectus
+        sed nisl molestie malesuada. Fusce consectetuer risus a nunc. Duis sapien nunc, commodo et, interdum suscipit,
+        sollicitudin et, dolor. Sed convallis magna eu sem. Donec vitae arcu.
+        </p><p>
+        Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Aliquam erat volutpat. Nulla quis diam. Maecenas
+        lorem. Mauris dictum facilisis augue. Nam sed tellus id magna elementum tincidunt. Nullam sapien sem, ornare ac,
+        nonummy non, lobortis a enim. Aliquam in lorem sit amet leo accumsan lacinia. In dapibus augue non sapien.
+        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+        repudiandae sint et molestiae non recusandae. Etiam egestas wisi a erat. Mauris elementum mauris vitae tortor.
+        Aenean vel massa quis mauris vehicula lacinia. Aliquam ante. Vivamus ac leo pretium faucibus. Aliquam id dolor.
+        Mauris dictum facilisis augue.
+        </p>
+
+        <div id="lightgallery" path="sokol"><a href="/images/sokol/20241227_174807.jpg" style="background-image:url('/images/sokol/20241227_174807.jpg');"></a><a href="/images/sokol/20250318_145504.jpg" style="background-image:url('/images/sokol/20250318_145504.jpg');"></a><a href="/images/sokol/IMG-20241206-WA0002.jpg" style="background-image:url('/images/sokol/IMG-20241206-WA0002.jpg');"></a><a href="/images/sokol/IMG-20241207-WA0001.jpg" style="background-image:url('/images/sokol/IMG-20241207-WA0001.jpg');"></a><a href="/images/sokol/IMG-20241227-WA0004.jpg" style="background-image:url('/images/sokol/IMG-20241227-WA0004.jpg');"></a><a href="/images/sokol/IMG-20241227-WA0006.jpg" style="background-image:url('/images/sokol/IMG-20241227-WA0006.jpg');"></a> </div> <!-- lightgallery -->
+
+
+      <script>
+        lightGallery(document.getElementById('lightgallery'), {
+          autoplayFirstVideo: false,
+          pager: false,
+          galleryId: "nature",
+          plugins: [lgZoom, lgThumbnail],
+          mobileSettings: {
+            controls: false,
+            showCloseIcon: false,
+            download: false,
+            rotate: false
+          }
+        });
+      </script>
+
+    </div>
+
+    <div class="location no-margin">
+      <div id="mapa">
+        <h3>VEDENÍ ODDÍLU:</h3>
+        <p>
+          <strong>Statutární zástupce:</strong> Hana Kokešová<br>
+          <strong>Email:</strong> hkok@centrum.cz<br>
+          <strong>Telefon:</strong> +420 736 141 385
+        </p>
+        <br>
+        <h3>KONTAKTNÍ INFORMACE</h3>
 
         <div class="contact-details">
           <p>
@@ -96,58 +143,17 @@
           </p>
         </div>
 
-        <div class="management">
-          <h3>VEDENÍ ODDÍLU:</h3>
-          <p>
-            <strong>Statutární zástupce:</strong> Hana Kokešová<br>
-            <strong>Email:</strong> hkok@centrum.cz<br>
-            <strong>Telefon:</strong> +420 736 141 385
-          </p>
-        </div>
-
-        <div id="lightgallery" path="sokol"
-        <a href="images/sokol/20241227_174807.jpg">
-            <img alt="foto" src="images/sokol/20241227_174807.jpg"/>
-          </a><a href="images/sokol/20250318_145504.jpg">
-            <img alt="foto" src="images/sokol/20250318_145504.jpg"/>
-          </a><a href="images/sokol/IMG-20241206-WA0002.jpg">
-            <img alt="foto" src="images/sokol/IMG-20241206-WA0002.jpg"/>
-          </a><a href="images/sokol/IMG-20241207-WA0001.jpg">
-            <img alt="foto" src="images/sokol/IMG-20241207-WA0001.jpg"/>
-          </a><a href="images/sokol/IMG-20241227-WA0004.jpg">
-            <img alt="foto" src="images/sokol/IMG-20241227-WA0004.jpg"/>
-          </a><a href="images/sokol/IMG-20241227-WA0006.jpg">
-            <img alt="foto" src="images/sokol/IMG-20241227-WA0006.jpg"/>
-          </a> </div> <!-- lightgallery -->
-
-
-        <script>
-          lightGallery(document.getElementById('lightgallery'), {
-            autoplayFirstVideo: false,
-            pager: false,
-            galleryId: "nature",
-            plugins: [lgZoom, lgThumbnail],
-            mobileSettings: {
-              controls: false,
-              showCloseIcon: false,
-              download: false,
-              rotate: false
-            }
-          });
-        </script>
-
-      </div>
-
-      <div class="location">
         <h3>KDE NÁS NAJDETE:</h3>
         <div class="map-container">
-          <iframe style="border:none; width:100%; height:100%;" src="https://frame.mapy.cz/s/gosagofabo" frameborder="0"></iframe>
+          <iframe style="border:none; width:100%; height:100%;" src="https://frame.mapy.cz/s/gosagofabo"
+                  frameborder="0"></iframe>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Footer -->
+<!-- Footer -->
 </div>
 
 <!-- Footer -->

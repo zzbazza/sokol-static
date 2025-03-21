@@ -38,7 +38,7 @@
 
 <!-- Fixed main navigation -->
 <nav class="main-nav">
-  <img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo">
+  <a href="../"><img src="../images/logo_sokol.png" alt="Sokol logo" class="menu-logo"></a>
   <div class="nav-container">
     <ul>
       <li class="dropdown "><a href="../"><i class="fa-solid fa-house-flag"></i>O NÁS</a>
@@ -59,6 +59,7 @@
           <li ><a href="../aspv/rodice"><i class="fa-solid fa-children"></i>Rodiče s dětmi</a></li>
           <li ><a href="../aspv/turiste"><i class="fa-solid fa-person-hiking"></i>Turisté</a></li>
           <li ><a href="../aspv/cykliste"><i class="fa-solid fa-person-biking"></i>Cyklisté</a></li>
+          <li class="active"><a href="../aspv/rozvrh"><i class="fa-solid fa-table"></i>Rozvrh</a></li>
         </ul>
       </li>
       <li ><a href="../tenis"><i class="fa-solid fa-baseball-ball"></i>TENIS</a></li>
@@ -73,86 +74,89 @@
   <!-- Main Content Area -->
   <div class="container">
     <div class="content">
-      <h1 >Rozvrh cvičebních hodin</h1>
+      <div class="content-full">
+        <h2>Rozvrh cvičebních hodin</h2>
 
-      <table class="bordered">
-        <tbody>
-        <tr>
-          <th>PO</th>
-          <td></td>
-          <td><h4>15:45-16:45</h4>MLADŠÍ ŽAČKY</td>
-          <td><h4>16:45-17:30</h4>STARŠÍ ŽAČKY</td>
-          <td colspan="2"><h4>17:30-18:45</h4>RODIČE S DĚTMI</td>
-          <td><h4>18:45-19:45</h4>AEROBIK</td>
-          <td><h4>20:00-21:00</h4>ŽENY I.</td>
-          <td><h4>21:00-22:30</h4>FLORBAL</td>
-        </tr>
-        <tr>
-          <th>ÚT</th>
-          <td></td>
-          <td><h4>15:00-16:00</h4>MLADŠÍ ŽÁCI</td>
-          <td><h4>16:00-17:00</h4>STARŠÍ ŽÁCI</td>
-          <td colspan="3"><h4>17:00-20:00</h4>VOLEJBAL</td>
-          <td><h4>20:00-21:30</h4>MUŽI</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>ST</th>
-          <td></td>
-          <td colspan="7"><h4>15:00-22:00</h4>VOLEJBAL</td>
-        </tr>
-        <tr>
-          <th>ČT</th>
-          <td><h4>9:30-10:30</h4> RODIČE S DĚTMI</td>
-          <td><h4></h4></td>
-          <td><h4>16:00-17:00</h4>MLADŠÍ ŽAČKY</td>
-          <td><h4>17:00-17:45</h4>STARŠÍ ŽAČKY</td>
-          <td><h4>17:45-18:45</h4>ŽENY II.</td>
-          <td><h4>18:45-19:45</h4>AEROBIK</td>
-          <td><h4>20:00-21:00</h4>ŽENY I.</td>
-          <td><h4>21:00-22:30</h4>FLORBAL</td>
-        </tr>
-        <tr>
-          <th>PÁ</th>
-          <td></td>
-          <td><h4>14:30-16:30</h4>VOLEJBAL-ŹACTVO</td>
-          <td><h4>16:30-17:30</h4>MLADŠÍ ŽÁCI</td>
-          <td><h4>17:30-18:30</h4>STARŠÍ ŽÁCI</td>
-          <td><h4>18:30-19:45</h4>VOLEJBAL</td>
-          <td><h4>19:45-20:15</h4>MUŽI II</td>
-          <td><h4>20:15-21:30</h4>MUŽI I</td>
-          <td><h4></h4></td>
-        </tr>
-        <tr>
-          <th>SO</th>
-          <td><h4></h4></td>
-          <td></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td><h4>18:00-19:30</h4>VOLEJBAL</td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-        </tr>
-        <tr>
-          <th>NE</th>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-          <td><h4></h4></td>
-        </tr>
-        </tbody>
-      </table>
+        <table class="bordered">
+          <tbody>
+          <tr>
+            <th>PO</th>
+            <td></td>
+            <td><h4>15:45-16:45</h4>MLADŠÍ ŽAČKY</td>
+            <td><h4>16:45-17:30</h4>STARŠÍ ŽAČKY</td>
+            <td colspan="2"><h4>17:30-18:45</h4>RODIČE S DĚTMI</td>
+            <td><h4>18:45-19:45</h4>AEROBIK</td>
+            <td><h4>20:00-21:00</h4>ŽENY I.</td>
+            <td><h4>21:00-22:30</h4>FLORBAL</td>
+          </tr>
+          <tr>
+            <th>ÚT</th>
+            <td></td>
+            <td><h4>15:00-16:00</h4>MLADŠÍ ŽÁCI</td>
+            <td><h4>16:00-17:00</h4>STARŠÍ ŽÁCI</td>
+            <td colspan="3"><h4>17:00-20:00</h4>VOLEJBAL</td>
+            <td><h4>20:00-21:30</h4>MUŽI</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>ST</th>
+            <td></td>
+            <td colspan="7"><h4>15:00-22:00</h4>VOLEJBAL</td>
+          </tr>
+          <tr>
+            <th>ČT</th>
+            <td><h4>9:30-10:30</h4> RODIČE S DĚTMI</td>
+            <td><h4></h4></td>
+            <td><h4>16:00-17:00</h4>MLADŠÍ ŽAČKY</td>
+            <td><h4>17:00-17:45</h4>STARŠÍ ŽAČKY</td>
+            <td><h4>17:45-18:45</h4>ŽENY II.</td>
+            <td><h4>18:45-19:45</h4>AEROBIK</td>
+            <td><h4>20:00-21:00</h4>ŽENY I.</td>
+            <td><h4>21:00-22:30</h4>FLORBAL</td>
+          </tr>
+          <tr>
+            <th>PÁ</th>
+            <td></td>
+            <td><h4>14:30-16:30</h4>VOLEJBAL-ŹACTVO</td>
+            <td><h4>16:30-17:30</h4>MLADŠÍ ŽÁCI</td>
+            <td><h4>17:30-18:30</h4>STARŠÍ ŽÁCI</td>
+            <td><h4>18:30-19:45</h4>VOLEJBAL</td>
+            <td><h4>19:45-20:15</h4>MUŽI II</td>
+            <td><h4>20:15-21:30</h4>MUŽI I</td>
+            <td><h4></h4></td>
+          </tr>
+          <tr>
+            <th>SO</th>
+            <td><h4></h4></td>
+            <td></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td><h4>18:00-19:30</h4>VOLEJBAL</td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+          </tr>
+          <tr>
+            <th>NE</th>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+            <td><h4></h4></td>
+          </tr>
+          </tbody>
+        </table>
 
-      <div class="notice">
-        <p><strong>Poznámka:</strong> Rozpis platný od září 2024. Změny v rozvrhu vyhrazeny. Aktuální informace sledujte
-          na nástěnce v tělocvičně nebo kontaktujte příslušného cvičitele.</p>
+        <div class="notice">
+          <p><strong>Poznámka:</strong> Rozpis platný od září 2024. Změny v rozvrhu vyhrazeny. Aktuální informace
+            sledujte
+            na nástěnce v tělocvičně nebo kontaktujte příslušného cvičitele.</p>
+        </div>
+
       </div>
-
     </div>
   </div>
 

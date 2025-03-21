@@ -133,6 +133,10 @@ body {
   margin-top: 90px;
 }
 
+.location.no-margin {
+  margin-top: 0;
+}
+
 .location h3 {
   color: #659018;
   margin-bottom: 15px;
@@ -195,16 +199,17 @@ body {
   gap: 30px;
   width: 100%;
 }
-.main-nav ul li {
+
+.main-nav > .nav-container > ul > li {
   border-bottom: 3px solid transparent;
 }
 
-.main-nav ul li:hover {
+.main-nav > .nav-container > ul > li:hover, .main-nav > .nav-container > ul > li.active {
   border-bottom: 3px solid #659018;
 }
 
 
-.main-nav a {
+.main-nav .nav-container a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -226,10 +231,6 @@ body {
 /* Dropdown Menu */
 .main-nav .dropdown {
   position: relative;
-}
-
-.main-nav .dropdown-menu li {
-  border: none;
 }
 
 .main-nav .dropdown-menu {
@@ -361,13 +362,25 @@ body {
   color: #659018;
 }
 
-.contacts i {
-  float: left;
-  margin: 18px 12px 0 0;
+.contacts-icons {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
-.contacts p {
-  float: left;
+.contacts-icons .item {
+  flex: 0 1 calc(80% - 8px);
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0px;
+}
+
+.contacts-icons i.item {
+  flex: 0 1 calc(20% - 8px);
+  text-align: right;
 }
 
 #mapa {
@@ -526,6 +539,19 @@ table.bordered {
   gap: 10px;
 }
 
-#lightgallery img {
-  height: 180px;
+#lightgallery a {
+  flex: 1 1 calc(25% - 10px); /* Each item (anchor) takes 25% of the row width minus the gap */
+  width: calc(25% - 10px); /* Prevent overflow */
+  height: 150px;
+  text-decoration: none; /* Remove underline or styling from the links */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
+
+/*#lightgallery img {*/
+/*  height: 150px; !* Maintain aspect ratio *!*/
+/*  width: auto; !* Make the image fill its parent (anchor) *!*/
+/*  object-fit: cover; !* Ensure the image fills its space without distortion *!*/
+/*  display: block; !* Remove any inline spacing from images *!*/
+/*}*/
+
