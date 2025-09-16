@@ -94,6 +94,7 @@ function processPage(pageFile, isIndex = false) {
     .replace('$AEROBIC_ACTIVE', pageFile.includes('aerobic.') ? 'class="active"' : '')
     .replace('$RODICE_ACTIVE', pageFile.includes('rodice.') ? 'class="active"' : '')
     .replace('$ROZVRH_ACTIVE', pageFile.includes('rozvrh.') ? 'class="active"' : '')
+    .replace('$CENIK_ACTIVE', pageFile.includes('cenik.') ? 'class="active"' : '')
     .replace('$VYBOR_ACTIVE', pageFile.includes('vybor.') ? 'class="active"' : '')
     .replace('$STANOVY_ACTIVE', pageFile.includes('stanovy.') ? 'class="active"' : '')
     .replace('$KALENDAR_ACTIVE', pageFile.includes('kalendar.') ? 'class="active"' : '')

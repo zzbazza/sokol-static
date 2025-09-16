@@ -22,6 +22,7 @@ const routes = {
   '/aspv/zeny': 'pages/aspv/zeny.html',
   '/aspv/cykliste': 'pages/aspv/cykliste.html',
   '/aspv/turiste': 'pages/aspv/turiste.html',
+  '/aspv/cenik': 'pages/aspv/cenik.html',
   '/aspv': 'pages/aspv.html',
   '/tenis': 'pages/tenis.html',
   '/volejbal': 'pages/volejbal.html',
