@@ -32,6 +32,7 @@ const routes = {
   '/sokol/vybor': 'pages/sokol/vybor.html',
   '/sokol/kalendar': 'pages/sokol/kalendar.html',
   '/sokol/historie': 'pages/sokol/historie.html',
+  '/sokol/sponzori': 'pages/sokol/sponzori.html',
 };
 
 // Set up route handlers

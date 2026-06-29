@@ -69,7 +69,7 @@ function processPage(pageFile, isIndex = false) {
   const isAspvSubpage = aspvSubpages.includes(pageFile);
 
   // Define Sokol subpages
-  let sokolSubpages = ['stanovy.html', 'vybor.html', 'kalendar.html', 'historie.html'];
+  let sokolSubpages = ['stanovy.html', 'vybor.html', 'kalendar.html', 'historie.html', 'sponzori.html'];
   sokolSubpages = sokolSubpages.map(subpage => `sokol/${subpage}`);
   const isSokolSubpage = sokolSubpages.includes(pageFile);
 
@@ -98,7 +98,8 @@ function processPage(pageFile, isIndex = false) {
     .replace('$VYBOR_ACTIVE', pageFile.includes('vybor.') ? 'class="active"' : '')
     .replace('$STANOVY_ACTIVE', pageFile.includes('stanovy.') ? 'class="active"' : '')
     .replace('$KALENDAR_ACTIVE', pageFile.includes('kalendar.') ? 'class="active"' : '')
-    .replace('$HISTORIE_ACTIVE', pageFile.includes('historie.') ? 'class="active"' : '');
+    .replace('$HISTORIE_ACTIVE', pageFile.includes('historie.') ? 'class="active"' : '')
+    .replace('$SPONZORI_ACTIVE', pageFile.includes('sponzori.') ? 'class="active"' : '');
 
   footer = footer.replace(/\$IMG_PATH/g, imgPath);
 
