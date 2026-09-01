@@ -577,3 +577,128 @@ table.bordered {
 /*  display: block; !* Remove any inline spacing from images *!*/
 /*}*/
 
+
+/* Modal - malé okno pro zprávy a kalendář */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px 35px;
+  border-top: 4px solid #659018;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-title {
+  color: #659018;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+
+.modal-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modal-body p {
+  margin-bottom: 10px;
+}
+
+.modal-body a {
+  color: #004675;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #b9b9b9;
+  line-height: 1;
+  padding: 5px;
+}
+
+.modal-close:hover {
+  color: #659018;
+}
+
+[data-modal], [data-modal-target] {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 25px 20px;
+  }
+}
+
+/* Novinky */
+.news a {
+  text-decoration: none;
+}
+
+/* Odkazy v rozvrhu */
+.bordered a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+}
+
+.bordered a:hover {
+  color: #659018;
+}
+
+/* Odkazy v kalendáři */
+.vybor a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 2px dotted #b9b9b9;
+}
+
+.vybor a:hover {
+  color: #659018;
+  border-bottom-color: #659018;
+}
+
+/* Odkaz otevírající modal - ikonu "i" doplní CSS */
+[data-modal]::after,
+[data-modal-target]::after {
+  content: "\f05a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: #b9b9b9;
+  margin-left: 6px;
+  position: relative;
+  bottom: 2px;
+}
